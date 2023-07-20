@@ -22,12 +22,11 @@ import 'package:pluitcare/app/data/model/regist_rs/all_dokter_klinik.dart';
 import 'package:pluitcare/app/data/model/regist_rs/antrian_dokter.dart';
 import 'package:pluitcare/app/data/model/regist_rs/dokter_by_name.dart';
 import 'package:pluitcare/app/routes/app_pages.dart';
-import 'package:crypto/crypto.dart';
 
 class API {
-  static const _url = 'https://rsbali.sirs.co.id/';
-  static const _baseUrl = '${_url}api/pasien';
-  static const _kodeKlinik = 'C00006';
+  static const _url = 'https://rspluit.sirs.co.id/';
+  static const _baseUrl = '${_url}api/v1';
+  static const _kodeKlinik = 'C00002';
   static const _getToken = '$_baseUrl/get-token.php';
   static const _getAksesPx = '$_baseUrl/px-akses.php';
   static const _postDaftarPxBaru = '$_baseUrl/post-daftar-px-baru.php';
@@ -59,7 +58,10 @@ class API {
   static const _getKlinikDetail = '$_baseUrl/get-klinik-detail.php';
 
   static Future<Token> getToken() async {
-    var response = await Dio().post(_getToken, data: {"KeyCode": "MeTiRs"});
+    var response = await Dio().post(_getToken, data: {
+      "KeyCode": "MeTiRs",
+      "v": "1",
+    });
     final data = jsonDecode(response.data);
     final obj = Token.fromJson(data);
     await LocalStorages.setToken(obj);
@@ -69,11 +71,7 @@ class API {
   static Future<AksesPX> getAksesPx(
       {required String user, required String pass}) async {
     var token = await getToken();
-    String generateMd5(String input) {
-      return md5.convert(utf8.encode(input)).toString();
-    }
-
-    final data = {"User": user, "Pass": generateMd5(pass)};
+    final data = {"us": user, "pw": pass};
     var response = await Dio().post(
       _getAksesPx,
       options: Options(
@@ -122,11 +120,7 @@ class API {
       required String idReqKlinik,
       required String kodeKlinik}) async {
     var token = Publics.controller.getToken.value;
-    var data = {
-      "kode_klinik": kodeKlinik,
-      "no_ktp": noKtp,
-      "idRegKlinik": idReqKlinik
-    };
+    var data = {"kk": kodeKlinik, "nt": noKtp, "re": idReqKlinik};
     var response = await Dio().post(
       _scanantreanKlinik,
       options: Options(
@@ -151,14 +145,10 @@ class API {
 
   static Future<DaftarPXBaru> scanAntrianKlinik(
       {required String noKtp,
-        required String idReqKlinik,
-        required String kodeKlinik}) async {
+      required String idReqKlinik,
+      required String kodeKlinik}) async {
     var token = Publics.controller.getToken.value;
-    var data = {
-      "kode_klinik": kodeKlinik,
-      "no_ktp": noKtp,
-      "idRegKlinik": idReqKlinik
-    };
+    var data = {"kk": kodeKlinik, "nt": noKtp, "re": idReqKlinik};
     var response = await Dio().post(
       _scanAntrianKlinik,
       options: Options(
@@ -197,17 +187,17 @@ class API {
   }) async {
     var token = await getToken();
     final data = {
-      "nama_pasien": namaPasien,
-      "email": email,
-      "no_ktp": noKtp,
-      "jenis_kelamin": jenisKelamin,
-      "tanggal_lahir": tanggalLahir,
-      "no_hp": noHp,
-      "umurPasien": umurPasien,
+      "np": namaPasien,
+      "em": email,
+      "nt": noKtp,
+      "jk": jenisKelamin,
+      "tl": tanggalLahir,
+      "nh": noHp,
+      "up": umurPasien,
       "tmpLhr": tmpLhr,
-      "alamat": alamat,
+      "al": alamat,
       "alergi": alergi,
-      "golongan_darah": golonganDarah,
+      "gd": golonganDarah,
       "password": password
     };
     var response = await Dio().post(
@@ -255,7 +245,7 @@ class API {
 
   static Future<Poli> getPoli() async {
     var token = Publics.controller.getToken.value;
-    var data = {"kode_klinik": _kodeKlinik};
+    var data = {"kk": _kodeKlinik};
     var response = await Dio().post(
       _getPoli,
       options: Options(
@@ -306,7 +296,7 @@ class API {
   static Future<GetDokterByName> getDokterByName(
       {required String namaDokter}) async {
     var token = Publics.controller.getToken.value;
-    var data = {"kode_klinik": _kodeKlinik, "filter": namaDokter};
+    var data = {"kk": _kodeKlinik, "filter": namaDokter};
     var response = await Dio().post(
       _getDokterKlinik,
       options: Options(
@@ -343,19 +333,19 @@ class API {
       required String tglDaftar}) async {
     var token = Publics.controller.getToken.value;
     var data = {
-      "nama_pasien": namaPasien,
+      "np": namaPasien,
       "jadwal": jadwal,
       "no_antrian": noAntrian,
-      "no_ktp": noKtp,
-      "kode_dokter": kodeDokter,
+      "nt": noKtp,
+      "kd": kodeDokter,
       "kode_bagian": kodeBagian,
       "nama_bagian": namaBagian,
       "nama_klinik": namaKlinik,
       "nama_dokter": namaDokter,
-      "durasi": durasi,
+      "dr": durasi,
       "ket_klinik": ketKlinik,
-      "kode_klinik": _kodeKlinik,
-      "tgl_daftar": tglDaftar
+      "kk": _kodeKlinik,
+      "td": tglDaftar
     };
     var response = await Dio().post(
       _postDaftarPx,
@@ -435,11 +425,11 @@ class API {
       required String tglDaftar}) async {
     var token = Publics.controller.getToken.value;
     var data = {
-      "kode_klinik": _kodeKlinik,
+      "kk": _kodeKlinik,
       "src": {
         "id_jadwal": idJadwal,
-        "kode_dokter": kodeDokter,
-        "tgl_daftar": tglDaftar,
+        "kd": kodeDokter,
+        "td": tglDaftar,
       }
     };
     var response = await Dio().post(
@@ -473,13 +463,13 @@ class API {
       required String tglDaftar}) async {
     var token = Publics.controller.getToken.value;
     var data = {
-      "nama_pasien": namaPasien,
-      "no_ktp": noKtp,
+      "np": namaPasien,
+      "nt": noKtp,
       "flag_pesan": flagPesan,
       "kode_rs": _kodeKlinik,
-      "kode_dokter": kodeDokter,
+      "kd": kodeDokter,
       "nama_dokter": namaDokter,
-      "tgl_daftar": tglDaftar
+      "td": tglDaftar
     };
     var response = await Dio().post(
       _postDaftarHemo,
@@ -506,7 +496,7 @@ class API {
   static Future<JadwalPx> getJadwalPx(
       {required String noKtp, required String tgl}) async {
     var token = Publics.controller.getToken.value;
-    var data = {"no_ktp": noKtp, "tgl": tgl};
+    var data = {"nt": noKtp, "tgl": tgl};
     var response = await Dio().post(
       _getJadwalPx,
       options: Options(
@@ -531,7 +521,7 @@ class API {
   static Future<DaftarPXBaru> getJadwalHemoPx(
       {required String noKtp, required String tgl}) async {
     var token = Publics.controller.getToken.value;
-    var data = {"no_ktp": noKtp, "tgl": tgl};
+    var data = {"nt": noKtp, "tgl": tgl};
     var response = await Dio().post(
       _getJadwalHemoPx,
       options: Options(
@@ -557,7 +547,7 @@ class API {
   static Future<JadwalPxDetail> getJadwalPxDetail(
       {required String idReq}) async {
     var token = Publics.controller.getToken.value;
-    var data = {"kode_klinik": _kodeKlinik, "idReg": idReq};
+    var data = {"kk": _kodeKlinik, "ir": idReq};
     var response = await Dio().post(
       _getJadwalPxDetail,
       options: Options(
@@ -583,7 +573,7 @@ class API {
   static Future<DaftarPXBaru> getJadwalHemoDetail(
       {required String idReq}) async {
     var token = Publics.controller.getToken.value;
-    var data = {"idReg": idReq};
+    var data = {"ir": idReq};
     var response = await Dio().post(
       _getJadwalHemoDetail,
       options: Options(
@@ -612,9 +602,9 @@ class API {
   //     required String kodeKlinik}) async {
   //   var token = Publics.controller.getToken.value;
   //   var data = {
-  //     "kode_klinik": kodeKlinik,
-  //     "no_ktp": noKtp,
-  //     "idRegKlinik": idReqKlinik
+  //     "kk": kodeKlinik,
+  //     "nt": noKtp,
+  //     "re": idReqKlinik
   //   };
   //   var response = await Dio().post(
   //     _scanAntrianKlinik,
@@ -640,7 +630,7 @@ class API {
 
   static Future<DataPasien> getDataPasien({required String noKtp}) async {
     var token = Publics.controller.getToken.value;
-    var data = {"no_ktp": noKtp};
+    var data = {"nt": noKtp};
     var response = await Dio().post(
       _getDataPasien,
       options: Options(
@@ -677,7 +667,7 @@ class API {
 
   static Future<DataPx> getDataPx({required String noKtp}) async {
     var token = Publics.controller.getToken.value;
-    var data = {"no_ktp": noKtp};
+    var data = {"nt": noKtp};
     var response = await Dio().post(
       _getDataPx,
       options: Options(
@@ -707,17 +697,17 @@ class API {
       required String alamat}) async {
     var token = Publics.controller.getToken.value;
     var data = {
-      "email": email,
-      "no_ktp": noKtp,
+      "em": email,
+      "nt": noKtp,
       "namaPasien": namaPasien,
-      "umurPasien": umurPasien,
+      "up": umurPasien,
       "goldarah": golDarah,
-      "no_hp": noHP,
+      "nh": noHP,
       "tanggal_lhr": tanggalLahir,
       "tempat_lhr": tempatLahir,
       "gender": gender,
       "alergi": alergi,
-      "alamat": alamat
+      "al": alamat
     };
     var response = await Dio().post(
       _editPasienLama,
@@ -744,7 +734,7 @@ class API {
   static Future<DaftarPXBaru> editFotoPasien(
       {required String noKtp, required String fotoProfile}) async {
     var token = Publics.controller.getToken.value;
-    var data = {"no_ktp": noKtp, "fotoProfile": fotoProfile};
+    var data = {"nt": noKtp, "fotoProfile": fotoProfile};
     var response = await Dio().post(
       _editFotoPasien,
       options: Options(
@@ -771,7 +761,7 @@ class API {
       {required String noKtp, required String fotoKtp}) async {
     var token = Publics.controller.getToken.value;
     var data = {
-      "no_ktp": noKtp,
+      "nt": noKtp,
       "fotoktp": fotoKtp //((Base64 String Foto))
     };
     var response = await Dio().post(
@@ -800,7 +790,7 @@ class API {
       {required String noKtp, required String tgl}) async {
     var token = Publics.controller.getToken.value;
     var data = {
-      "kode_klinik": _kodeKlinik,
+      "kk": _kodeKlinik,
       "ktp": noKtp,
       "url_rs": _url,
       "tgl_mr": tgl,
@@ -836,7 +826,7 @@ class API {
   static Future<DetailRiwayat> getDetailRiwayat({required String id}) async {
     var token = Publics.controller.getToken.value;
     var data = {
-      "kode_klinik": _kodeKlinik,
+      "kk": _kodeKlinik,
       "id": id,
       "url_rs": _url,
     };
@@ -873,7 +863,7 @@ class API {
       {required String kdPenunjang, required String kodeTarif}) async {
     var token = Publics.controller.getToken.value;
     var data = {
-      "kode_klinik": _kodeKlinik,
+      "kk": _kodeKlinik,
       "param": {"kd_penunjang": kdPenunjang, "kode_tarif": kodeTarif}
     };
     var response = await Dio().post(
@@ -905,10 +895,10 @@ class API {
       required String kodePesanResepDr}) async {
     var token = Publics.controller.getToken.value;
     var data = {
-      "kode_klinik": _kodeKlinik,
-      "no_mr": noMr,
-      "no_registrasi": noRegister,
-      "no_kunjungan": noKunjungan,
+      "kk": _kodeKlinik,
+      "nm": noMr,
+      "nr": noRegister,
+      "nk": noKunjungan,
       "kode_pesan_resep_dr": kodePesanResepDr
     };
     var response = await Dio().post(
