@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:pluitcare/app/data/componen/publics.dart';
+import 'package:adokter/app/data/componen/publics.dart';
 
 class NoHomeController extends GetxController {
   //TODO: Implement NoHomeController

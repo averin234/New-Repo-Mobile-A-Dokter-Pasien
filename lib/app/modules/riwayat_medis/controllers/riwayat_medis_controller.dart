@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
-import 'package:pluitcare/app/data/componen/publics.dart';
+import 'package:adokter/app/data/componen/publics.dart';
 
 class RiwayatMedisController extends GetxController {
   //TODO: Implement RiwayatMedisController

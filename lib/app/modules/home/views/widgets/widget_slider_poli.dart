@@ -3,11 +3,11 @@ import 'package:dismissible_page/dismissible_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pluitcare/app/data/componen/fetch_data.dart';
-import 'package:pluitcare/app/data/componen/images.dart';
-import 'package:pluitcare/app/data/model/regist_rs/all_dokter_klinik.dart';
-import 'package:pluitcare/app/modules/home/controllers/home_controller.dart';
-import 'package:pluitcare/app/modules/profile-view/views/profile_view_view.dart';
+import 'package:adokter/app/data/componen/fetch_data.dart';
+import 'package:adokter/app/data/componen/images.dart';
+import 'package:adokter/app/data/model/regist_rs/all_dokter_klinik.dart';
+import 'package:adokter/app/modules/home/controllers/home_controller.dart';
+import 'package:adokter/app/modules/profile-view/views/profile_view_view.dart';
 import 'package:text_scroll/text_scroll.dart';
 
 import '../../../../routes/app_pages.dart';
@@ -173,6 +173,7 @@ class Item1 extends StatelessWidget {
       ),
     );
   }
+
   Widget buildSheetklompokjadwal({required Items items}) {
     return Container(
       decoration: BoxDecoration(
@@ -224,17 +225,23 @@ class Item1 extends StatelessWidget {
                       ),
                       SizedBox(
                         width: 260,
-                        child : Text(
+                        child: Text(
                           items.namaPegawai ?? '',
-                          style: const TextStyle(fontWeight: FontWeight.bold,fontSize: 14),
-                        ),),
+                          style: const TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 14),
+                        ),
+                      ),
                       const SizedBox(
                         height: 5,
                       ),
                       SizedBox(
                         width: 270,
-                        child : Text(items.namaBagian ?? '',
-                          style: const TextStyle(color: Colors.blue,fontSize: 13),),),
+                        child: Text(
+                          items.namaBagian ?? '',
+                          style:
+                              const TextStyle(color: Colors.blue, fontSize: 13),
+                        ),
+                      ),
                     ],
                   ),
                   const SizedBox(
@@ -276,22 +283,32 @@ class Item1 extends StatelessWidget {
                               height: 10,
                             ),
                             items.jadwal == null
-                                ? Padding(padding: EdgeInsets.only(right: 100,left: 100),
-                                child :Column(children: [
-                                  Image.asset(
-                                    'assets/images/nojadwal.png',
-                                    height: 150,
+                                ? Padding(
+                                    padding:
+                                        EdgeInsets.only(right: 100, left: 100),
+                                    child: Column(
+                                      children: [
+                                        Image.asset(
+                                          'assets/images/nojadwal.png',
+                                          height: 150,
+                                        ),
+                                        SizedBox(
+                                          height: 10,
+                                        ),
+                                        Text("Jadwal Tidak Tersedia"),
+                                        SizedBox(
+                                          height: 10,
+                                        ),
+                                      ],
+                                    ))
+                                : Column(
+                                    children: items.jadwal!
+                                        .map(
+                                          (e) => JadwalPraktik(
+                                              jadwal: e, items: items),
+                                        )
+                                        .toList(),
                                   ),
-                                  SizedBox(height: 10,),
-                                  Text("Jadwal Tidak Tersedia"),
-                                  SizedBox(height: 10,),],))
-                                : Column( children: items.jadwal!
-                                  .map(
-                                    (e) => JadwalPraktik(
-                                    jadwal: e, items: items),
-                              )
-                                  .toList(),
-                            ),
                           ],
                         ),
                       ),

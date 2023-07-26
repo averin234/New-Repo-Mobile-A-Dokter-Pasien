@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pluitcare/app/data/componen/data_regist_model.dart';
-import 'package:pluitcare/app/data/componen/images.dart';
-import 'package:pluitcare/app/data/componen/local_storage.dart';
-import 'package:pluitcare/app/data/componen/publics.dart';
-import 'package:pluitcare/app/modules/custom_dialog/dialog_logout.dart';
+import 'package:adokter/app/data/componen/data_regist_model.dart';
+import 'package:adokter/app/data/componen/images.dart';
+import 'package:adokter/app/data/componen/local_storage.dart';
+import 'package:adokter/app/data/componen/publics.dart';
+import 'package:adokter/app/modules/custom_dialog/dialog_logout.dart';
 
 import '../../../data/componen/my_font_size.dart';
 import '../../../routes/app_pages.dart';

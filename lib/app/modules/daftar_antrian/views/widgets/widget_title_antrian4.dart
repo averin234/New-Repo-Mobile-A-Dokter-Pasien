@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pluitcare/app/data/componen/my_style.dart';
+import 'package:adokter/app/data/componen/my_style.dart';
 
 class WidgetTitleAntrian4 extends StatefulWidget {
   const WidgetTitleAntrian4({Key? key}) : super(key: key);
@@ -23,4 +23,3 @@ class _WidgetTitleAntrian4State extends State<WidgetTitleAntrian4> {
     );
   }
 }
-

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pluitcare/app/data/model/regist_rs/all_dokter_klinik.dart';
+import 'package:adokter/app/data/model/regist_rs/all_dokter_klinik.dart';
 import 'package:intl/intl.dart' as intl;
-import 'package:pluitcare/app/routes/app_pages.dart';
+import 'package:adokter/app/routes/app_pages.dart';
 
 import '../../controllers/register_rs_controller.dart';
 

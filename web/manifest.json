@@ -1,6 +1,6 @@
 {
-    "name": "pluitcare",
-    "short_name": "pluitcare",
+    "name": "adokter",
+    "short_name": "adokter",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#hexcode",

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:pluitcare/app/modules/shammer/shimmer_antrian.dart';
+import 'package:adokter/app/modules/shammer/shimmer_antrian.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pluitcare/app/data/componen/fetch_data.dart';
-import 'package:pluitcare/app/data/model/profile_pasien/data_px.dart';
-import 'package:pluitcare/app/modules/daftar_antrian/controllers/daftar_antrian_controller.dart';
-import 'package:pluitcare/app/modules/daftar_antrian/views/widgets/widget_listview_antrian.dart';
-import 'package:pluitcare/app/modules/daftar_antrian/views/widgets/widget_title_antrian.dart';
-import 'package:pluitcare/app/modules/daftar_antrian/views/widgets/widget_title_antrian4.dart';
-import 'package:pluitcare/app/modules/daftar_antrian/views/widgets/widgets_select_calender.dart';
-import 'package:pluitcare/app/modules/home/views/widgets/widget_no_antri.dart';
+import 'package:adokter/app/data/componen/fetch_data.dart';
+import 'package:adokter/app/data/model/profile_pasien/data_px.dart';
+import 'package:adokter/app/modules/daftar_antrian/controllers/daftar_antrian_controller.dart';
+import 'package:adokter/app/modules/daftar_antrian/views/widgets/widget_listview_antrian.dart';
+import 'package:adokter/app/modules/daftar_antrian/views/widgets/widget_title_antrian.dart';
+import 'package:adokter/app/modules/daftar_antrian/views/widgets/widget_title_antrian4.dart';
+import 'package:adokter/app/modules/daftar_antrian/views/widgets/widgets_select_calender.dart';
+import 'package:adokter/app/modules/home/views/widgets/widget_no_antri.dart';
 import '../../../data/componen/my_font_size.dart';
 import '../../../data/componen/my_style.dart';
 

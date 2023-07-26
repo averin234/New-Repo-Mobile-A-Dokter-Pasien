@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pluitcare/app/data/componen/my_colors.dart';
+import 'package:adokter/app/data/componen/my_colors.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
 
 import '../../data/componen/my_font_size.dart';

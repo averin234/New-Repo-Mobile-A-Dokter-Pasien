@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pluitcare/app/data/componen/data_regist_model.dart';
-import 'package:pluitcare/app/data/componen/fetch_data.dart';
-import 'package:pluitcare/app/data/componen/local_storage.dart';
-import 'package:pluitcare/app/data/model/login_and_regist/akses_px.dart';
-import 'package:pluitcare/app/modules/login/controllers/login_controller.dart';
+import 'package:adokter/app/data/componen/data_regist_model.dart';
+import 'package:adokter/app/data/componen/fetch_data.dart';
+import 'package:adokter/app/data/componen/local_storage.dart';
+import 'package:adokter/app/data/model/login_and_regist/akses_px.dart';
+import 'package:adokter/app/modules/login/controllers/login_controller.dart';
 import '../../../../routes/app_pages.dart';
 import '../constants.dart';
 import 'custom_button.dart';
@@ -87,7 +87,7 @@ class LoginForm extends StatelessWidget {
               animation: animation,
               additionalOffset: 2 * space,
               child: CustomButton(
-                color: kBlue,
+                color: Colors.blue,
                 textColor: kWhite,
                 text: 'Login Sekarang',
                 onPressed: () async {

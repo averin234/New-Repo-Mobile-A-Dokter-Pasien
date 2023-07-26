@@ -1,4 +1,4 @@
-import 'package:pluitcare/app/data/componen/publics.dart';
+import 'package:adokter/app/data/componen/publics.dart';
 import 'package:get/get.dart';
 
 class RubahPasswordController extends GetxController {

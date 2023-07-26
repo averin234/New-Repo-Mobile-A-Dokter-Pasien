@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
-import 'package:pluitcare/app/modules/detail-poli/controllers/detail_poli_controller.dart';
+import 'package:adokter/app/modules/detail-poli/controllers/detail_poli_controller.dart';
 
 import '../../../../data/model/regist_rs/all_dokter_klinik.dart';
 

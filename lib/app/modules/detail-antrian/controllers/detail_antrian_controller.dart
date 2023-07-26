@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:pluitcare/app/data/model/antrian_rs/jadwal_px.dart';
+import 'package:adokter/app/data/model/antrian_rs/jadwal_px.dart';
 
 import '../../../data/model/profile_pasien/data_px.dart';
 

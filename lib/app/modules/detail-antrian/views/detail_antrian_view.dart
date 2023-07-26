@@ -3,7 +3,7 @@ import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pluitcare/app/modules/detail-antrian/views/widgets/card_ticket_antrian.dart';
+import 'package:adokter/app/modules/detail-antrian/views/widgets/card_ticket_antrian.dart';
 
 import '../../../data/componen/my_font_size.dart';
 import '../controllers/detail_antrian_controller.dart';
@@ -31,8 +31,7 @@ class DetailAntrianView extends GetView<DetailAntrianController> {
             title: Text(
               "Detail Antrean",
               style: GoogleFonts.nunito(
-                  fontSize: MyFontSize.large1,
-                  fontWeight: FontWeight.bold),
+                  fontSize: MyFontSize.large1, fontWeight: FontWeight.bold),
             ),
             actions: const [
               // IconButton(

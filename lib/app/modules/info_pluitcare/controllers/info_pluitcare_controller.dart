@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 
-class InfopluitcareController extends GetxController {
-  //TODO: Implement InfopluitcareController
+class InfoadokterController extends GetxController {
+  //TODO: Implement InfoadokterController
 
   final count = 0.obs;
   @override

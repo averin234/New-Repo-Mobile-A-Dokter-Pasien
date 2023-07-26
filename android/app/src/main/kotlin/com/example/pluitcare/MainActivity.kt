@@ -1,4 +1,4 @@
-package averin.sirs_pluit.com
+package a_dokter_pasien.com
 
 import io.flutter.embedding.android.FlutterActivity
 

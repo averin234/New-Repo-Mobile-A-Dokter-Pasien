@@ -2,10 +2,10 @@ import 'package:dismissible_page/dismissible_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pluitcare/app/data/componen/images.dart';
-import 'package:pluitcare/app/data/model/regist_rs/all_dokter_klinik.dart';
-import 'package:pluitcare/app/modules/profile-view/views/profile_view_view.dart';
-import 'package:pluitcare/app/modules/register_rs/views/widgets/jadwal_praktik.dart';
+import 'package:adokter/app/data/componen/images.dart';
+import 'package:adokter/app/data/model/regist_rs/all_dokter_klinik.dart';
+import 'package:adokter/app/modules/profile-view/views/profile_view_view.dart';
+import 'package:adokter/app/modules/register_rs/views/widgets/jadwal_praktik.dart';
 import 'package:text_scroll/text_scroll.dart';
 
 import '../../../../routes/app_pages.dart';

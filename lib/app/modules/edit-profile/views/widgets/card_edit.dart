@@ -6,11 +6,11 @@ import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:pluitcare/app/data/componen/fetch_data.dart';
-import 'package:pluitcare/app/data/componen/images.dart';
-import 'package:pluitcare/app/modules/register/views/widget/calender.dart';
-import 'package:pluitcare/app/modules/register/views/widget/entry_field.dart';
-import 'package:pluitcare/app/routes/app_pages.dart';
+import 'package:adokter/app/data/componen/fetch_data.dart';
+import 'package:adokter/app/data/componen/images.dart';
+import 'package:adokter/app/modules/register/views/widget/calender.dart';
+import 'package:adokter/app/modules/register/views/widget/entry_field.dart';
+import 'package:adokter/app/routes/app_pages.dart';
 import '../../../../data/model/dropdown_model.dart';
 import '../../controllers/edit_profile_controller.dart';
 import 'mydropdown.dart';
@@ -209,7 +209,8 @@ class MyRegister1 extends GetView<EditProfileController> {
           namaPasien: controller.namaController.text,
           noHP: controller.noTelpController.text,
           email: controller.emailController.text,
-          umurPasien: controller.umur(controller.tglLhrController.text).toString(),
+          umurPasien:
+              controller.umur(controller.tglLhrController.text).toString(),
           golDarah: controller.golDarahController.text,
           tanggalLahir: controller.tglLhrController.text,
           tempatLahir: controller.tempatLhrController.text,

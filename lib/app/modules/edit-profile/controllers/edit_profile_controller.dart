@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
-import 'package:pluitcare/app/data/componen/publics.dart';
+import 'package:adokter/app/data/componen/publics.dart';
 
 import '../../../data/model/dropdown_model.dart';
 

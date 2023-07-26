@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:pluitcare/app/modules/shammer/nohome.dart';
+import 'package:adokter/app/modules/shammer/nohome.dart';
 
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pluitcare/app/data/componen/fetch_data.dart';
-import 'package:pluitcare/app/data/componen/my_colors.dart';
-import 'package:pluitcare/app/data/componen/my_style.dart';
-import 'package:pluitcare/app/routes/app_pages.dart';
+import 'package:adokter/app/data/componen/fetch_data.dart';
+import 'package:adokter/app/data/componen/my_colors.dart';
+import 'package:adokter/app/data/componen/my_style.dart';
+import 'package:adokter/app/routes/app_pages.dart';
 
 import 'widgets/widget_cardinfopluit.dart';
 import 'widgets/widget_no_antri.dart';
@@ -80,15 +80,6 @@ class _NoHomeViewState extends State<NoHomeView> {
                     const SizedBox(height: 10),
                     Padding(
                       padding:
-                          const EdgeInsets.only(left: 20, top: 15, bottom: 15),
-                      child: Text(
-                        "Antrean anda saat ini",
-                        style: MyStyle.textTitleBlack,
-                      ),
-                    ),
-                    const WidgetNoAntri(),
-                    Padding(
-                      padding:
                           const EdgeInsets.only(top: 15, right: 20, left: 20),
                       child: Text(
                         "Layanan Utama",
@@ -96,6 +87,16 @@ class _NoHomeViewState extends State<NoHomeView> {
                       ),
                     ),
                     const WidgetStraggeredGridView(),
+                    const SizedBox(height: 10),
+                    Padding(
+                      padding:
+                          const EdgeInsets.only(left: 20, top: 15, bottom: 15),
+                      child: Text(
+                        "Antrean anda saat ini",
+                        style: MyStyle.textTitleBlack,
+                      ),
+                    ),
+                    const WidgetNoAntri(),
                     const WidgetTitle2(),
                     Container(
                       decoration: BoxDecoration(

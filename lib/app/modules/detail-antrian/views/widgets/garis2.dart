@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:pluitcare/app/modules/scanner_antrian/views/widgets/custom_colors.dart';
+import 'package:adokter/app/modules/scanner_antrian/views/widgets/custom_colors.dart';
 
 import '../../../scanner_antrian/views/widgets/custom_colors.dart';
 import '../../../scanner_antrian/views/widgets/custom_colors.dart';

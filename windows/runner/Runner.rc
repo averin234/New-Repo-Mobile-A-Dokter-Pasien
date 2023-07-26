@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "pluitcare" "\0"
+            VALUE "FileDescription", "adokter" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "pluitcare" "\0"
+            VALUE "InternalName", "adokter" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2023 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "pluitcare.exe" "\0"
-            VALUE "ProductName", "pluitcare" "\0"
+            VALUE "OriginalFilename", "adokter.exe" "\0"
+            VALUE "ProductName", "adokter" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

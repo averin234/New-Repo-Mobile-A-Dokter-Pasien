@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pluitcare/app/routes/app_pages.dart';
+import 'package:adokter/app/routes/app_pages.dart';
 
 class DialogSaveProfile extends StatelessWidget {
   const DialogSaveProfile({super.key});

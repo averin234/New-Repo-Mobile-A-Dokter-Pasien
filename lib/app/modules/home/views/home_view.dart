@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:pluitcare/app/modules/shammer/shimmer_antrihome.dart';
-import 'package:pluitcare/app/modules/shammer/shimmer_nama_rs.dart';
+import 'package:adokter/app/modules/home/views/widgets/slider.dart';
+import 'package:adokter/app/modules/shammer/shimmer_antrihome.dart';
+import 'package:adokter/app/modules/shammer/shimmer_nama_rs.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
-import 'package:pluitcare/app/data/componen/fetch_data.dart';
-import 'package:pluitcare/app/data/componen/images.dart';
-import 'package:pluitcare/app/data/componen/my_colors.dart';
-import 'package:pluitcare/app/data/componen/my_style.dart';
-import 'package:pluitcare/app/modules/home/views/widgets/widget_cardantri.dart';
-import 'package:pluitcare/app/modules/home/views/widgets/widget_cardinfopluit.dart';
-import 'package:pluitcare/app/modules/home/views/widgets/widget_no_antri.dart';
-import 'package:pluitcare/app/modules/home/views/widgets/widget_slider_poli.dart';
-import 'package:pluitcare/app/modules/home/views/widgets/widget_straggered_grid_view.dart';
-import 'package:pluitcare/app/modules/home/views/widgets/widget_title2.dart';
-import 'package:pluitcare/app/routes/app_pages.dart';
+import 'package:adokter/app/data/componen/fetch_data.dart';
+import 'package:adokter/app/data/componen/images.dart';
+import 'package:adokter/app/data/componen/my_colors.dart';
+import 'package:adokter/app/data/componen/my_style.dart';
+import 'package:adokter/app/modules/home/views/widgets/widget_cardantri.dart';
+import 'package:adokter/app/modules/home/views/widgets/widget_cardinfopluit.dart';
+import 'package:adokter/app/modules/home/views/widgets/widget_no_antri.dart';
+import 'package:adokter/app/modules/home/views/widgets/widget_slider_poli.dart';
+import 'package:adokter/app/modules/home/views/widgets/widget_straggered_grid_view.dart';
+import 'package:adokter/app/modules/home/views/widgets/widget_title2.dart';
+import 'package:adokter/app/routes/app_pages.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 import '../controllers/home_controller.dart';
@@ -94,6 +95,7 @@ class _HomeView1State extends State<HomeView1> {
         // ListView, CustomScrollView, etc. here
         child: ListView(
           children: [
+            // ImageSliderDemo(),
             FutureBuilder(
               future: API.getDetailKlinik(),
               builder: (context, snapshot) {
@@ -109,6 +111,17 @@ class _HomeView1State extends State<HomeView1> {
                 }
               },
             ),
+            SizedBox(
+              height: 10,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 15, right: 20, left: 20),
+              child: Text(
+                "Layanan Utama",
+                style: MyStyle.textTitleBlack,
+              ),
+            ),
+            const WidgetStraggeredGridView(),
             SizedBox(
               height: 10,
             ),
@@ -162,14 +175,6 @@ class _HomeView1State extends State<HomeView1> {
                 }
               },
             ),
-            Padding(
-              padding: const EdgeInsets.only(top: 15, right: 20, left: 20),
-              child: Text(
-                "Layanan Utama",
-                style: MyStyle.textTitleBlack,
-              ),
-            ),
-            const WidgetStraggeredGridView(),
             const WidgetTitle2(),
             Container(
               decoration: BoxDecoration(

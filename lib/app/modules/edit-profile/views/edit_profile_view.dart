@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pluitcare/app/modules/edit-profile/views/widgets/card_edit.dart';
+import 'package:adokter/app/modules/edit-profile/views/widgets/card_edit.dart';
 import 'package:text_scroll/text_scroll.dart';
 
 import '../../../data/componen/my_font_size.dart';

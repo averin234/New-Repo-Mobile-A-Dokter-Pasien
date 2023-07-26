@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pluitcare/app/routes/app_pages.dart';
+import 'package:adokter/app/routes/app_pages.dart';
 
 import '../constants.dart';
 import 'fade_slide_transition.dart';
@@ -41,8 +41,11 @@ class Headerlogin extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              SizedBox(
+                height: 10,
+              ),
               Image.asset(
-                'assets/images/logo_rs_pluit.png',
+                'assets/images/info.png',
                 height: 60,
                 width: 100,
               ),
@@ -51,9 +54,9 @@ class Headerlogin extends StatelessWidget {
                 animation: animation,
                 additionalOffset: 0.0,
                 child: Text(
-                  'Rumah Sakit Pluit',
+                  'A-Dokter',
                   style: Theme.of(context).textTheme.headlineSmall!.copyWith(
-                        color: kBlack,
+                        color: Colors.blue,
                         fontWeight: FontWeight.bold,
                       ),
                 ),
@@ -63,7 +66,7 @@ class Headerlogin extends StatelessWidget {
                 animation: animation,
                 additionalOffset: 16.0,
                 child: Text(
-                  'Health Care for Pluit RS Patient, online registration and E - MR.',
+                  'Aplikasi dokter berbasis cloud untuk meningkatkan kualitas pelayanan praktek dokter mandiri.',
                   style: Theme.of(context).textTheme.titleMedium!.copyWith(
                         color: kBlack.withOpacity(0.5),
                       ),

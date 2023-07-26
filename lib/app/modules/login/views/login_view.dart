@@ -1,12 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pluitcare/app/modules/login/controllers/login_controller.dart';
-import 'package:pluitcare/app/modules/login/views/widgets/custom_clippers/blue_top_clipper.dart';
-import 'package:pluitcare/app/modules/login/views/widgets/custom_clippers/grey_top_clipper.dart';
-import 'package:pluitcare/app/modules/login/views/widgets/custom_clippers/white_top_clipper.dart';
-import 'package:pluitcare/app/modules/login/views/widgets/header.dart';
-import 'package:pluitcare/app/modules/login/views/widgets/login_form.dart';
+import 'package:adokter/app/modules/login/controllers/login_controller.dart';
+import 'package:adokter/app/modules/login/views/widgets/custom_clippers/blue_top_clipper.dart';
+import 'package:adokter/app/modules/login/views/widgets/custom_clippers/grey_top_clipper.dart';
+import 'package:adokter/app/modules/login/views/widgets/custom_clippers/white_top_clipper.dart';
+import 'package:adokter/app/modules/login/views/widgets/header.dart';
+import 'package:adokter/app/modules/login/views/widgets/login_form.dart';
 import 'constants.dart';
 
 class LoginView extends GetView<LoginController> {

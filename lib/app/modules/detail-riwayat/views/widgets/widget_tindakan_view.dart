@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pluitcare/app/data/model/mr_pasien/detailRiwayat.dart';
+import 'package:adokter/app/data/model/mr_pasien/detailRiwayat.dart';
 
 class CardTindakan extends StatelessWidget {
   final List<Tindakan> tindakan;

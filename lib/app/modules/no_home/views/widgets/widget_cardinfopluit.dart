@@ -17,45 +17,52 @@ class _WidgetInfoState extends State<WidgetInfo> {
       margin: EdgeInsets.only(left: 0, right: 0, top: 0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(0),
-        color: Colors.white,
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withOpacity(0.1),
-            spreadRadius: 5,
-            blurRadius: 4,
-            offset: Offset(0, 0), // changes position of shadow
-          ),
-        ],
+        image: const DecorationImage(
+          image: AssetImage("assets/images/frame1.png"),
+          fit: BoxFit.cover,
+        ),
+        // boxShadow: [
+        //   BoxShadow(
+        //     color: Colors.grey.withOpacity(0.1),
+        //     spreadRadius: 5,
+        //     blurRadius: 4,
+        //     offset: Offset(0, 0), // changes position of shadow
+        //   ),
+        // ],
       ),
       child: Padding(
         padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
         child: Container(
-          padding: const EdgeInsets.only(top: 20, bottom: 20),
+          padding: const EdgeInsets.only(top: 20, bottom: 0),
           child: Row(
             children: [
               const SizedBox(
                 width: 20,
               ),
               Image.asset(
-                'assets/images/logo_rs_pluit.png',
-                width: 80,
+                'assets/images/dokter1.png',
+                height: 110,
               ),
               Expanded(
                 child: Column(
                   children: [
                     Text(
-                      widget.detailklinik.res!.first.namaPerusahaan ?? '',
+                      "A-Dokter Pasien",
                       style: const TextStyle(
-                          fontSize: 18, fontWeight: FontWeight.bold),
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xFF00AFC1)),
                       textAlign: TextAlign.center,
                     ),
                     const SizedBox(
                       height: 10,
                     ),
                     Text(
-                      widget.detailklinik.res![0].alamat ?? '',
+                      "Aplikasi dokter berbasis cloud untuk meningkatkan kualitas pelayanan praktek dokter mandiri",
                       style: const TextStyle(
-                          fontSize: 14, fontWeight: FontWeight.bold),
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.grey),
                       textAlign: TextAlign.center,
                     ),
                   ],

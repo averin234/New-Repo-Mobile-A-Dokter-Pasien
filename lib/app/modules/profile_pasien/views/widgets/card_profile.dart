@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:pluitcare/app/data/componen/images.dart';
-import 'package:pluitcare/app/modules/profile_pasien/controllers/profile_pasien_controller.dart';
+import 'package:adokter/app/data/componen/images.dart';
+import 'package:adokter/app/modules/profile_pasien/controllers/profile_pasien_controller.dart';
 
 class CardProfile extends StatelessWidget {
   final bool readOnly;

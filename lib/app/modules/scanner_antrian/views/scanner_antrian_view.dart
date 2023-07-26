@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
-import 'package:pluitcare/app/data/componen/fetch_data.dart';
-import 'package:pluitcare/app/modules/scanner_antrian/controllers/scanner_antrian_controller.dart';
-import 'package:pluitcare/app/routes/app_pages.dart';
+import 'package:adokter/app/data/componen/fetch_data.dart';
+import 'package:adokter/app/modules/scanner_antrian/controllers/scanner_antrian_controller.dart';
+import 'package:adokter/app/routes/app_pages.dart';
 
 class ScannerAntrianView extends GetView<ScannerAntrianController> {
   const ScannerAntrianView({super.key});

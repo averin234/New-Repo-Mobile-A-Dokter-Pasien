@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pluitcare/app/data/componen/my_style.dart';
+import 'package:adokter/app/data/componen/my_style.dart';
 
 import '../../../../data/componen/my_font_size.dart';
 

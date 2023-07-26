@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pluitcare/app/data/componen/fetch_data.dart';
-import 'package:pluitcare/app/modules/detail-riwayat/views/widgets/widget_Resep_view.dart';
-import 'package:pluitcare/app/modules/detail-riwayat/views/widgets/widget_detail_view.dart';
-import 'package:pluitcare/app/modules/detail-riwayat/views/widgets/widget_icd10_view.dart';
-import 'package:pluitcare/app/modules/detail-riwayat/views/widgets/widget_tindakan_view.dart';
-import 'package:pluitcare/app/modules/detail-riwayat/views/widgets/widget_title_resep.dart';
-import 'package:pluitcare/app/modules/detail-riwayat/views/widgets/widget_vitalsign_view.dart';
+import 'package:adokter/app/data/componen/fetch_data.dart';
+import 'package:adokter/app/modules/detail-riwayat/views/widgets/widget_Resep_view.dart';
+import 'package:adokter/app/modules/detail-riwayat/views/widgets/widget_detail_view.dart';
+import 'package:adokter/app/modules/detail-riwayat/views/widgets/widget_icd10_view.dart';
+import 'package:adokter/app/modules/detail-riwayat/views/widgets/widget_tindakan_view.dart';
+import 'package:adokter/app/modules/detail-riwayat/views/widgets/widget_title_resep.dart';
+import 'package:adokter/app/modules/detail-riwayat/views/widgets/widget_vitalsign_view.dart';
 
 import '../../../data/componen/my_font_size.dart';
 import '../controllers/detail_riwayat_controller.dart';
@@ -36,7 +36,9 @@ class DetailRiwayatView extends GetView<DetailRiwayatController> {
             title: Text(
               "Riwayat Pasien",
               style: GoogleFonts.nunito(
-                  color: Colors.black, fontSize: 18,fontWeight: FontWeight.bold),
+                  color: Colors.black,
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold),
             ),
             bottom: AppBar(
               toolbarHeight: 0,

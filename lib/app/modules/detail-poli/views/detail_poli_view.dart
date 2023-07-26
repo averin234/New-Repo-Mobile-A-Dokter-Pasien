@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 
 import 'package:get/get.dart';
-import 'package:pluitcare/app/data/componen/images.dart';
-import 'package:pluitcare/app/data/model/regist_rs/all_dokter_klinik.dart';
-import 'package:pluitcare/app/modules/detail-poli/views/widgets/card_form_poli.dart';
-import 'package:pluitcare/app/modules/detail-poli/views/widgets/widget_listview_poli_view.dart';
+import 'package:adokter/app/data/componen/images.dart';
+import 'package:adokter/app/data/model/regist_rs/all_dokter_klinik.dart';
+import 'package:adokter/app/modules/detail-poli/views/widgets/card_form_poli.dart';
+import 'package:adokter/app/modules/detail-poli/views/widgets/widget_listview_poli_view.dart';
 
 import '../../../data/componen/fetch_data.dart';
 import '../../../data/model/regist_rs/daftar_px.dart';

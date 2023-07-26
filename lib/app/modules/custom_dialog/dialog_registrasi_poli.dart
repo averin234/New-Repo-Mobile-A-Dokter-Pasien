@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pluitcare/app/data/componen/fetch_data.dart';
-import 'package:pluitcare/app/data/model/regist_rs/daftar_px.dart';
-import 'package:pluitcare/app/modules/custom_dialog/dialog_registrasi_gagal_regis.dart';
-import 'package:pluitcare/app/modules/custom_dialog/dialog_registrasi_sukses.dart';
-import 'package:pluitcare/app/modules/detail-poli/controllers/detail_poli_controller.dart';
+import 'package:adokter/app/data/componen/fetch_data.dart';
+import 'package:adokter/app/data/model/regist_rs/daftar_px.dart';
+import 'package:adokter/app/modules/custom_dialog/dialog_registrasi_gagal_regis.dart';
+import 'package:adokter/app/modules/custom_dialog/dialog_registrasi_sukses.dart';
+import 'package:adokter/app/modules/detail-poli/controllers/detail_poli_controller.dart';
 
 class DialogRegisPoli extends GetView<DetailPoliController> {
   const DialogRegisPoli({super.key});
@@ -94,11 +94,11 @@ class DialogRegisPoli extends GetView<DetailPoliController> {
                           final daftarPx = await API.postDaftarPx(
                             namaPasien: controller.namaController.text,
                             jadwal:
-                            controller.listAntrianDokter.value.jam ?? '',
+                                controller.listAntrianDokter.value.jam ?? '',
                             noAntrian:
-                            (controller.listAntrianDokter.value.antrian ??
-                                0)
-                                .toString(),
+                                (controller.listAntrianDokter.value.antrian ??
+                                        0)
+                                    .toString(),
                             noKtp: controller.dataRegist.value.noKtp ?? '',
                             kodeDokter: controller.items.kodeDokter ?? '',
                             kodeBagian: controller.items.kodeBagian ?? '',
@@ -106,14 +106,14 @@ class DialogRegisPoli extends GetView<DetailPoliController> {
                             namaKlinik: 'Rumah Sakit Pluit',
                             namaDokter: controller.items.namaPegawai ?? '',
                             durasi:
-                            controller.listAntrianDokter.value.durasi ?? '',
+                                controller.listAntrianDokter.value.durasi ?? '',
                             ketKlinik: 'Baru',
                             tglDaftar: controller.jadwalController.text,
                           );
                           if (daftarPx.code.toString() == '500') {
                             Get.dialog(DialogGagalRegis(
                                 daftarPx:
-                                DaftarPx.fromJson(daftarPx.toJson())));
+                                    DaftarPx.fromJson(daftarPx.toJson())));
                           } else if (daftarPx.code.toString() == '200') {
                             Get.dialog(const DialogSuksesRegis());
                           }

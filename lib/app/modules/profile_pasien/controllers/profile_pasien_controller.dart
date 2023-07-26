@@ -2,8 +2,8 @@ import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
-import 'package:pluitcare/app/data/componen/local_storage.dart';
-import 'package:pluitcare/app/data/componen/publics.dart';
+import 'package:adokter/app/data/componen/local_storage.dart';
+import 'package:adokter/app/data/componen/publics.dart';
 
 class ProfilePasienController extends GetxController {
   //TODO: Implement ProfilePasienController

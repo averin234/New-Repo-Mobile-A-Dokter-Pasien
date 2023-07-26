@@ -11,7 +11,7 @@ abstract class Routes {
   static const DAFTAR_ANTRIAN = _Paths.DAFTAR_ANTRIAN;
   static const RIWAYAT_MEDIS = _Paths.RIWAYAT_MEDIS;
   static const PROFILE_PASIEN = _Paths.PROFILE_PASIEN;
-  static const INFO_pluitcare = _Paths.INFO_pluitcare;
+  static const INFO_adokter = _Paths.INFO_adokter;
   static const DETAIL_RIWAYAT = _Paths.DETAIL_RIWAYAT;
   static const DETAIL_ANTRIAN = _Paths.DETAIL_ANTRIAN;
   static const DETAIL_POLI = _Paths.DETAIL_POLI;
@@ -34,7 +34,7 @@ abstract class _Paths {
   static const DAFTAR_ANTRIAN = '/daftar-antrian';
   static const RIWAYAT_MEDIS = '/riwayat-medis';
   static const PROFILE_PASIEN = '/profile-pasien';
-  static const INFO_pluitcare = '/info-pluitcare';
+  static const INFO_adokter = '/info-adokter';
   static const DETAIL_RIWAYAT = '/detail-riwayat';
   static const DETAIL_ANTRIAN = '/detail-antrian';
   static const DETAIL_POLI = '/detail-poli';

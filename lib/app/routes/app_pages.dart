@@ -1,4 +1,3 @@
-import 'package:pluitcare/app/modules/info_pluitcare/bindings/info_pluitcare_binding.dart';
 import 'package:get/get.dart';
 
 import '../modules/daftar_antrian/bindings/daftar_antrian_binding.dart';
@@ -13,6 +12,7 @@ import '../modules/edit-profile/bindings/edit_profile_binding.dart';
 import '../modules/edit-profile/views/edit_profile_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
+import '../modules/info_pluitcare/bindings/info_pluitcare_binding.dart';
 import '../modules/info_pluitcare/views/info_pluitcare_view.dart';
 import '../modules/informasi_apps/bindings/informasi_apps_binding.dart';
 import '../modules/informasi_apps/views/informasi_apps_view.dart';
@@ -91,9 +91,9 @@ class AppPages {
       binding: ProfilePasienBinding(),
     ),
     GetPage(
-      name: _Paths.INFO_pluitcare,
-      page: () => const InfopluitcareView(),
-      binding: InfopluitcareBinding(),
+      name: _Paths.INFO_adokter,
+      page: () => const InfoadokterView(),
+      binding: InfoadokterBinding(),
     ),
     GetPage(
       name: _Paths.DETAIL_RIWAYAT,

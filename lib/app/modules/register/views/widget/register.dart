@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pluitcare/app/modules/register/views/widget/calender.dart';
-import 'package:pluitcare/app/modules/register/views/widget/entry_field.dart';
+import 'package:adokter/app/modules/register/views/widget/calender.dart';
+import 'package:adokter/app/modules/register/views/widget/entry_field.dart';
 import '../../../../data/model/dropdown_model.dart';
 import '../../controllers/register_controller.dart';
 import 'mydropdown.dart';

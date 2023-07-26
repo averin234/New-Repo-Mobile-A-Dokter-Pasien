@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:pluitcare/app/data/componen/fetch_data.dart';
-import 'package:pluitcare/app/data/componen/publics.dart';
-import 'package:pluitcare/app/data/model/profile_pasien/data_px.dart';
+import 'app/data/componen/fetch_data.dart';
+import 'app/data/componen/publics.dart';
+import 'app/data/model/profile_pasien/data_px.dart';
 import 'app/routes/app_pages.dart';
 
 void main() async {

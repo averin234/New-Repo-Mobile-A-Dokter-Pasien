@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pluitcare/app/data/model/antrian_rs/jadwal_px.dart';
+import 'package:adokter/app/data/model/antrian_rs/jadwal_px.dart';
 import '../../../../data/componen/my_font_size.dart';
 import '../../../../data/componen/my_style.dart';
 import '../../../../data/model/profile_pasien/data_px.dart';

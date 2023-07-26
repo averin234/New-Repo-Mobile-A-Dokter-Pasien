@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:pluitcare/app/data/componen/local_storage.dart';
+import 'package:adokter/app/data/componen/local_storage.dart';
 
 import '../../../data/componen/publics.dart';
 

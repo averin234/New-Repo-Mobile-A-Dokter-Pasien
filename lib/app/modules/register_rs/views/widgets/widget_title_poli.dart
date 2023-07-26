@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pluitcare/app/data/componen/my_style.dart';
+import 'package:adokter/app/data/componen/my_style.dart';
 
 class WidgetTitlePoli extends StatefulWidget {
   const WidgetTitlePoli({Key? key}) : super(key: key);

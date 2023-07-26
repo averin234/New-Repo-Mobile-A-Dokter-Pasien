@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
-import 'package:pluitcare/app/modules/shammer/shimmer_rmr.dart';
+import 'package:adokter/app/modules/shammer/shimmer_rmr.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pluitcare/app/data/componen/fetch_data.dart';
-import 'package:pluitcare/app/modules/home/views/widgets/widget_cardnoantriant.dart';
-import 'package:pluitcare/app/modules/riwayat_medis/controllers/riwayat_medis_controller.dart';
-import 'package:pluitcare/app/modules/riwayat_medis/views/widgets/widget_listview_riwayat.dart';
-import 'package:pluitcare/app/modules/riwayat_medis/views/widgets/widget_title_riwayat2.dart';
-import 'package:pluitcare/app/modules/riwayat_medis/views/widgets/widget_title_riwayat3.dart';
-import 'package:pluitcare/app/modules/riwayat_medis/views/widgets/widgets_select_calender.dart';
+import 'package:adokter/app/data/componen/fetch_data.dart';
+import 'package:adokter/app/modules/home/views/widgets/widget_cardnoantriant.dart';
+import 'package:adokter/app/modules/riwayat_medis/controllers/riwayat_medis_controller.dart';
+import 'package:adokter/app/modules/riwayat_medis/views/widgets/widget_listview_riwayat.dart';
+import 'package:adokter/app/modules/riwayat_medis/views/widgets/widget_title_riwayat2.dart';
+import 'package:adokter/app/modules/riwayat_medis/views/widgets/widget_title_riwayat3.dart';
+import 'package:adokter/app/modules/riwayat_medis/views/widgets/widgets_select_calender.dart';
 import '../../../data/componen/my_font_size.dart';
 
 class RiwayatMedisView extends GetView<RiwayatMedisController> {

@@ -1,19 +1,19 @@
 // main.dart
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
-import 'package:pluitcare/app/modules/register_rs/views/widgets/cari_dokter.dart';
-import 'package:pluitcare/app/modules/register_rs/views/widgets/dropdown_kecamatan.dart';
-import 'package:pluitcare/app/modules/register_rs/views/widgets/dropdown_kota.dart';
-import 'package:pluitcare/app/modules/register_rs/views/widgets/nospesialisasi.dart';
-import 'package:pluitcare/app/modules/shammer/shimmer_listview.dart';
+import 'package:adokter/app/modules/register_rs/views/widgets/cari_dokter.dart';
+import 'package:adokter/app/modules/register_rs/views/widgets/dropdown_kecamatan.dart';
+import 'package:adokter/app/modules/register_rs/views/widgets/dropdown_kota.dart';
+import 'package:adokter/app/modules/register_rs/views/widgets/nospesialisasi.dart';
+import 'package:adokter/app/modules/shammer/shimmer_listview.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pluitcare/app/data/componen/fetch_data.dart';
-import 'package:pluitcare/app/data/model/regist_rs/all_dokter_klinik.dart';
-import 'package:pluitcare/app/modules/register_rs/controllers/register_rs_controller.dart';
-import 'package:pluitcare/app/modules/register_rs/views/widgets/widget_dropdownListExample.dart';
-import 'package:pluitcare/app/modules/register_rs/views/widgets/widget_listview_poli.dart';
-import 'package:pluitcare/app/modules/register_rs/views/widgets/widget_title_poli2.dart';
+import 'package:adokter/app/data/componen/fetch_data.dart';
+import 'package:adokter/app/data/model/regist_rs/all_dokter_klinik.dart';
+import 'package:adokter/app/modules/register_rs/controllers/register_rs_controller.dart';
+import 'package:adokter/app/modules/register_rs/views/widgets/widget_dropdownListExample.dart';
+import 'package:adokter/app/modules/register_rs/views/widgets/widget_listview_poli.dart';
+import 'package:adokter/app/modules/register_rs/views/widgets/widget_title_poli2.dart';
 import 'package:search_page/search_page.dart';
 import '../../../data/componen/my_font_size.dart';
 
@@ -124,18 +124,18 @@ class RegisterRsView extends GetView<RegisterRsController> {
                           child: Text('Daftar Dokter Spesialisasi',
                               style: TextStyle(fontWeight: FontWeight.bold)),
                         ),
-                        Padding(
-                          padding: EdgeInsets.only(right: 10, left: 10),
-                          child: Row(
-                            children: <Widget>[
-                              Expanded(child: DropDownListExample()),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Expanded(child: CariDokter()),
-                            ],
-                          ),
-                        ),
+                        // Padding(
+                        //   padding: EdgeInsets.only(right: 10, left: 10),
+                        //   child: Row(
+                        //     children: <Widget>[
+                        //       Expanded(child: DropDownListExample()),
+                        //       SizedBox(
+                        //         width: 10,
+                        //       ),
+                        //       Expanded(child: CariDokter()),
+                        //     ],
+                        //   ),
+                        // ),
                         const SizedBox(
                           height: 10,
                         ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pluitcare/app/data/componen/images.dart';
-import 'package:pluitcare/app/routes/app_pages.dart';
+import 'package:adokter/app/data/componen/images.dart';
+import 'package:adokter/app/routes/app_pages.dart';
 
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -249,7 +249,8 @@ class _RubahPasswordViewState extends State<RubahPasswordView> {
                         ],
                       ),
                       Text(
-                        (controller.dataRegist.value.tanggalLahir ?? '').substring(0,10),
+                        (controller.dataRegist.value.tanggalLahir ?? '')
+                            .substring(0, 10),
                         style: GoogleFonts.nunito(
                           fontWeight: FontWeight.normal,
                           color: Colors.black,

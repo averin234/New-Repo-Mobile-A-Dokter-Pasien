@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pluitcare/app/data/componen/fetch_data.dart';
-import 'package:pluitcare/app/modules/register/views/widget/password.dart';
-import 'package:pluitcare/app/modules/register/views/widget/register.dart';
-import 'package:pluitcare/app/routes/app_pages.dart';
+import 'package:adokter/app/data/componen/fetch_data.dart';
+import 'package:adokter/app/modules/register/views/widget/password.dart';
+import 'package:adokter/app/modules/register/views/widget/register.dart';
+import 'package:adokter/app/routes/app_pages.dart';
 
 import '../controllers/register_controller.dart';
 
