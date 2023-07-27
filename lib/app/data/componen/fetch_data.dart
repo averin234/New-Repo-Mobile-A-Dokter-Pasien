@@ -335,7 +335,7 @@ class API {
       "tl": tanggalLahir,
       "nh": noHp,
       "up": umurPasien,
-      "tmpLhr": tmpLhr,
+      "tmpt_lhr": tmpLhr,
       "al": alamat,
       "alergi": alergi,
       "gd": golonganDarah,
