@@ -8,7 +8,6 @@ import 'package:adokter/app/data/componen/publics.dart';
 import 'package:adokter/app/data/model/antrian_rs/jadwal_px.dart';
 import 'package:adokter/app/data/model/antrian_rs/jadwal_px_detail.dart';
 import 'package:adokter/app/data/model/homepage/detail_klinik.dart';
-import 'package:adokter/app/data/model/homepage/poli.dart';
 import 'package:adokter/app/data/model/login_and_regist/akses_px.dart';
 import 'package:adokter/app/data/model/login_and_regist/daftar_px_baru.dart';
 import 'package:adokter/app/data/model/login_and_regist/token.dart';
@@ -124,6 +123,7 @@ class API {
     }
     return obj;
   }
+
   static Future<ListData> getKota({
     required String id_prov,
   }) async {
@@ -151,6 +151,7 @@ class API {
     print(obj.toJson());
     return obj;
   }
+
   static Future<ListData> getProvinsi() async {
     var token = Publics.controller.getToken.value;
     final data = {};
@@ -176,9 +177,10 @@ class API {
     print(obj.toJson());
     return obj;
   }
+
   static Future<ListData> getKecamatan({required String id}) async {
     var token = Publics.controller.getToken.value;
-    final data = {'id_kota': id};
+    final data = {'kt': id};
     var response = await Dio().post(
       _getKecamatan,
       options: Options(
@@ -201,9 +203,10 @@ class API {
     print(obj.toJson());
     return obj;
   }
+
   static Future<GetKelurahan> getKelurahan({required String id}) async {
     var token = Publics.controller.getToken.value;
-    final data = {'id_kecamatan': id};
+    final data = {'kec': id};
     var response = await Dio().post(
       _getKelurahan,
       options: Options(
@@ -226,6 +229,7 @@ class API {
     print(obj.toJson());
     return obj;
   }
+
   static Future<ListData> getSpesialisasi() async {
     var token = await getToken();
     final data = {'id': 2};
@@ -405,8 +409,10 @@ class API {
   // }
 
   static Future<GetAllDokterKlinik> getAllDokterKlinik(
-      {required String kode_bagian, required String provinsi, required String kota}) async {
-    var data = {"kode_bagian": kode_bagian, "provinsi" : provinsi, "kota": kota};
+      {required String kode_bagian,
+      required String provinsi,
+      required String kota}) async {
+    var data = {"kode_bagian": kode_bagian, "provinsi": provinsi, "kota": kota};
     final token = Publics.controller.getToken.value;
     var response = await Dio().post(
       _getAllDokterKlinik,
