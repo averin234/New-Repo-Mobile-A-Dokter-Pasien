@@ -23,6 +23,7 @@ class _DropDownkecamatanState extends State<DropDownkecamatan> {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(RegisterRsController());
     return Padding(
       padding: const EdgeInsets.all(1),
       child: Column(
@@ -31,8 +32,9 @@ class _DropDownkecamatanState extends State<DropDownkecamatan> {
           const SizedBox(
             height: 10,
           ),
+          Obx(() =>
           FutureBuilder(
-              future: API.getProvinsi(),
+              future: API.getKota(id_prov: controller.provinsi.value),
               builder: (context, snapshot) {
                 if (snapshot.hasData &&
                     snapshot.connectionState != ConnectionState.waiting &&
@@ -48,7 +50,7 @@ class _DropDownkecamatanState extends State<DropDownkecamatan> {
                 } else {
                   return Container();
                 }
-              }),
+              }),),
         ],
       ),
     );
@@ -101,9 +103,10 @@ class AppTextField extends StatelessWidget {
                         ),
                         onPressed: () {
                           textEditingController.text = e.nama!;
-                          controller.provinsi.value = e.kode!;
+                          controller.kecamatan.value = e.kode!;
                           Get.back();
-                        },
+
+                          },
                       ),
                     )
                     .toList(),

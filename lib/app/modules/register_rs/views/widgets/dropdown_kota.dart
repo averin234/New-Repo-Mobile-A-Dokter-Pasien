@@ -30,7 +30,7 @@ class _DropDownKotaState extends State<DropDownKota> {
             height: 10,
           ),
           FutureBuilder(
-              future: API.getKota(id_prov: '1'),
+              future: API.getProvinsi(),
               builder: (context, snapshot) {
                 if (snapshot.hasData &&
                     snapshot.connectionState != ConnectionState.waiting &&
@@ -38,7 +38,7 @@ class _DropDownKotaState extends State<DropDownKota> {
                   final data = snapshot.data!;
                   return AppTextField(
                     textEditingController: _cityTextEditingController,
-                    hint: "Kota",
+                    hint: "Provinsi",
                     isCitySelected: true,
                     lists: data.list!,
                     title: '',
@@ -99,7 +99,7 @@ class AppTextField extends StatelessWidget {
                         ),
                         onPressed: () {
                           textEditingController.text = e.nama!;
-                          controller.kota.value = e.kode!;
+                          controller.provinsi.value = e.kode!;
                           Get.back();
                         },
                       ),
