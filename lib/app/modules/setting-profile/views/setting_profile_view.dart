@@ -403,7 +403,7 @@ class SettingProfileView extends GetView<SettingProfileController> {
                         children: [
                           Text('Aplikasi masih pada tahap mengembangan'),
                           Text('mohon maaf atas ketidak nyamanan '),
-                          Text('saat menggunakan aplikasi Pluit Care '),
+                          Text('saat menggunakan aplikasi a-Dokter '),
                         ],
                       )),
                     ),

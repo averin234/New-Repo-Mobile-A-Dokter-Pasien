@@ -18,7 +18,7 @@ class VerticalSliderDemo extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-        future: API.getAllDokterKlinik(filter: ''),
+        future: API.getAllDokterKlinik(kode_bagian: '', provinsi: '', kota: ''),
         builder: (context, snapshot) {
           if (snapshot.hasData &&
               snapshot.connectionState != ConnectionState.waiting &&

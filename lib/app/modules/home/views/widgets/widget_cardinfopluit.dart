@@ -21,14 +21,6 @@ class _WidgetInfoState extends State<WidgetInfo> {
           image: AssetImage("assets/images/frame1.png"),
           fit: BoxFit.cover,
         ),
-        // boxShadow: [
-        //   BoxShadow(
-        //     color: Colors.grey.withOpacity(0.1),
-        //     spreadRadius: 5,
-        //     blurRadius: 4,
-        //     offset: Offset(0, 0), // changes position of shadow
-        //   ),
-        // ],
       ),
       child: Padding(
         padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
@@ -68,7 +60,6 @@ class _WidgetInfoState extends State<WidgetInfo> {
                   ],
                 ),
               ),
-
               const SizedBox(
                 width: 5,
               ),

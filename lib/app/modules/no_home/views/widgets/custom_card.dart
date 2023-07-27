@@ -35,10 +35,15 @@ class CustomCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: const BoxDecoration(
+        color: Colors.white,
+        borderRadius: const BorderRadius.all(
+          const Radius.circular(10.0),
+        ),
+      ),
       padding: padding,
       height: height,
       width: width,
-      color: bgColor,
       child: Card(
         shape: RoundedRectangleBorder(
           borderRadius:

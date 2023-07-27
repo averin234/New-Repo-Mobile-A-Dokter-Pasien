@@ -5,6 +5,8 @@ import 'package:adokter/app/data/componen/fetch_data.dart';
 import 'package:adokter/app/data/model/homepage/poli.dart';
 import 'package:adokter/app/modules/register_rs/controllers/register_rs_controller.dart';
 
+import '../../../../data/model/list_data.dart';
+
 class DropDownListExample extends StatefulWidget {
   const DropDownListExample({
     Key? key,
@@ -29,7 +31,7 @@ class _DropDownListExampleState extends State<DropDownListExample> {
             height: 10,
           ),
           FutureBuilder(
-              future: API.getPoli(),
+              future: API.getSpesialisasi(),
               builder: (context, snapshot) {
                 if (snapshot.hasData &&
                     snapshot.connectionState != ConnectionState.waiting &&
@@ -90,15 +92,15 @@ class AppTextField extends StatelessWidget {
                             foregroundColor: Colors.black,
                             padding: const EdgeInsets.symmetric(vertical: 20)),
                         child: Text(
-                          e.namaBagian!,
+                          e.nama!,
                           style: GoogleFonts.nunito(
                             fontSize: 17.0,
                           ),
                           textAlign: TextAlign.start,
                         ),
                         onPressed: () {
-                          textEditingController.text = e.namaBagian!;
-                          controller.namaBagian.value = e.kodeBagian!;
+                          textEditingController.text = e.nama!;
+                          controller.kode_bagian.value = e.kode!;
                           Get.back();
                         },
                       ),

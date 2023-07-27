@@ -11,7 +11,7 @@ class InfoadokterView extends GetView<InfoadokterController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Info Pluit care'),
+        title: const Text('Info a-Dokter'),
         centerTitle: true,
         elevation: 1,
       ),

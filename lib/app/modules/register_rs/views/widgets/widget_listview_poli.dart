@@ -91,7 +91,7 @@ class CardListViewPoli extends StatelessWidget {
                     ),
                   ),
                   child: ClipRRect(
-                    borderRadius: BorderRadius.circular(5),
+                    borderRadius: BorderRadius.circular(1000),
                     child: Hero(
                       tag: tag,
                       child: Image.network(
@@ -349,7 +349,7 @@ class CardListViewPoli extends StatelessWidget {
               child: Column(
                 children: [
                   const Text(
-                      "Anda Belum Terdaftar atau Login di Aplikasi SIRS Rumah Sakit Pluit",
+                      "Anda Belum Terdaftar atau Login di Aplikasi A-Dokter",
                       style: TextStyle(
                           color: Colors.black45,
                           fontSize: 18,
@@ -359,7 +359,7 @@ class CardListViewPoli extends StatelessWidget {
                     height: 5,
                   ),
                   const Text(
-                      "Silahkan daftar atau Login untuk bisa melakukan registrasi poliklinik",
+                      "Silahkan daftar atau Login untuk bisa melakukan registrasi untuk mengunakan A-Dokter",
                       style: TextStyle(color: Colors.black45, fontSize: 15),
                       textAlign: TextAlign.center),
                   const SizedBox(
@@ -372,7 +372,7 @@ class CardListViewPoli extends StatelessWidget {
                     width: 200,
                     height: 200,
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: 30,
                   ),
                   Row(

@@ -1,3 +1,4 @@
+import 'package:adokter/app/data/model/list_data.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -29,7 +30,7 @@ class _DropDownKotaState extends State<DropDownKota> {
             height: 10,
           ),
           FutureBuilder(
-              future: API.getPoli(),
+              future: API.getKota(id_prov: '1'),
               builder: (context, snapshot) {
                 if (snapshot.hasData &&
                     snapshot.connectionState != ConnectionState.waiting &&
@@ -90,15 +91,15 @@ class AppTextField extends StatelessWidget {
                             foregroundColor: Colors.black,
                             padding: const EdgeInsets.symmetric(vertical: 20)),
                         child: Text(
-                          e.namaBagian!,
+                          e.nama!,
                           style: GoogleFonts.nunito(
                             fontSize: 17.0,
                           ),
                           textAlign: TextAlign.start,
                         ),
                         onPressed: () {
-                          textEditingController.text = e.namaBagian!;
-                          controller.namaBagian.value = e.kodeBagian!;
+                          textEditingController.text = e.nama!;
+                          controller.kota.value = e.kode!;
                           Get.back();
                         },
                       ),

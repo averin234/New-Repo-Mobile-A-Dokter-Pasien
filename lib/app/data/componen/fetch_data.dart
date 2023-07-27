@@ -23,10 +23,14 @@ import 'package:adokter/app/data/model/regist_rs/antrian_dokter.dart';
 import 'package:adokter/app/data/model/regist_rs/dokter_by_name.dart';
 import 'package:adokter/app/routes/app_pages.dart';
 
+import '../model/kelurahan.dart';
+import '../model/list_data.dart';
+
 class API {
   // static const _url = 'https://demo.a-dokter.id/';
   static const _url = 'https://a-dokter.id/';
   static const _baseUrl = '${_url}api/pasien';
+  static const _baseUrl1 = '${_url}api/v1';
   static const _kodeKlinik = 'C00002';
   static const _getToken = '$_baseUrl/get-token.php';
   static const _getAksesPx = '$_baseUrl/px-akses.php';
@@ -39,6 +43,7 @@ class API {
   static const _getAntrianDokter = '$_baseUrl/get-antrian-dokter.php';
   static const _postDaftarPx = '$_baseUrl/post-daftar-px.php';
   static const _getAsuransiPx = '$_baseUrl/get-asuransi-px.php';
+  static const _getSpesialisasi = '$_baseUrl1/get-spesialisasi.php';
   static const _getDokterHemo = '$_baseUrl/get-dokter-hemo.php';
   static const _postDaftarHemo = '$_baseUrl/post-daftar-hemo.php';
   static const _getJadwalPx = '$_baseUrl/get-jadwal-px.php';
@@ -57,6 +62,10 @@ class API {
   static const _getFotoRad = '$_baseUrl/get-foto-rad.php';
   static const _getCetakResep = '$_baseUrl/get-cetak-resep.php';
   static const _getKlinikDetail = '$_baseUrl/get-klinik-detail.php';
+  static const _getProvinsi = '$_baseUrl1/get-provinsi.php';
+  static const _getKecamatan = '$_baseUrl1/get-kecamatan.php';
+  static const _getKelurahan = '$_baseUrl1/get-kelurahan.php';
+  static const _getKota = '$_baseUrl1/get-kota.php';
 
   static Future<Token> getToken() async {
     var response = await Dio().post(_getToken, data: {
@@ -78,7 +87,7 @@ class API {
       options: Options(
         headers: {
           "Content-Type": "application/json",
-          "MTR": token.token ?? '',
+          "X-Api-Token": token.token ?? '',
         },
       ),
       data: data,
@@ -115,6 +124,133 @@ class API {
     }
     return obj;
   }
+  static Future<ListData> getKota({
+    required String id_prov,
+  }) async {
+    var token = Publics.controller.getToken.value;
+    final data = {"id_provinsi": id_prov};
+    var response = await Dio().post(
+      _getKota,
+      options: Options(
+        headers: {
+          "Content-Type": "application/json",
+          "X-Api-Token": token.token,
+        },
+      ),
+      data: data,
+    );
+    final datas = jsonDecode(response.data);
+    final obj = ListData.fromJson(datas);
+    if (obj.msg == 'Invalid token: Expired') {
+      Get.offAllNamed(Routes.LOGIN);
+      Get.snackbar(
+        obj.code.toString(),
+        obj.msg.toString(),
+      );
+    }
+    print(obj.toJson());
+    return obj;
+  }
+  static Future<ListData> getProvinsi() async {
+    var token = Publics.controller.getToken.value;
+    final data = {};
+    var response = await Dio().post(
+      _getProvinsi,
+      options: Options(
+        headers: {
+          "Content-Type": "application/json",
+          "X-Api-Token": token.token,
+        },
+      ),
+      data: data,
+    );
+    final datas = jsonDecode(response.data);
+    final obj = ListData.fromJson(datas);
+    if (obj.msg == 'Invalid token: Expired') {
+      Get.offAllNamed(Routes.LOGIN);
+      Get.snackbar(
+        obj.code.toString(),
+        obj.msg.toString(),
+      );
+    }
+    print(obj.toJson());
+    return obj;
+  }
+  static Future<ListData> getKecamatan({required String id}) async {
+    var token = Publics.controller.getToken.value;
+    final data = {'id_kota': id};
+    var response = await Dio().post(
+      _getKecamatan,
+      options: Options(
+        headers: {
+          "Content-Type": "application/json",
+          "X-Api-Token": token.token,
+        },
+      ),
+      data: data,
+    );
+    final datas = jsonDecode(response.data);
+    final obj = ListData.fromJson(datas);
+    if (obj.msg == 'Invalid token: Expired') {
+      Get.offAllNamed(Routes.LOGIN);
+      Get.snackbar(
+        obj.code.toString(),
+        obj.msg.toString(),
+      );
+    }
+    print(obj.toJson());
+    return obj;
+  }
+  static Future<GetKelurahan> getKelurahan({required String id}) async {
+    var token = Publics.controller.getToken.value;
+    final data = {'id_kecamatan': id};
+    var response = await Dio().post(
+      _getKelurahan,
+      options: Options(
+        headers: {
+          "Content-Type": "application/json",
+          "X-Api-Token": token.token,
+        },
+      ),
+      data: data,
+    );
+    final datas = jsonDecode(response.data);
+    final obj = GetKelurahan.fromJson(datas);
+    if (obj.msg == 'Invalid token: Expired') {
+      Get.offAllNamed(Routes.LOGIN);
+      Get.snackbar(
+        obj.code.toString(),
+        obj.msg.toString(),
+      );
+    }
+    print(obj.toJson());
+    return obj;
+  }
+  static Future<ListData> getSpesialisasi() async {
+    var token = await getToken();
+    final data = {'id': 2};
+    var response = await Dio().post(
+      _getSpesialisasi,
+      options: Options(
+        headers: {
+          "Content-Type": "application/json",
+          "X-Api-Token": token.token,
+        },
+      ),
+      data: data,
+    );
+    final datas = jsonDecode(response.data);
+    final obj = ListData.fromJson(datas);
+    if (obj.msg == 'Invalid token: Expired') {
+      Get.offAllNamed(Routes.LOGIN);
+      Get.snackbar(
+        obj.code.toString(),
+        obj.msg.toString(),
+      );
+    }
+    print(obj.toJson());
+    return obj;
+  }
 
   static Future<DaftarPXBaru> scanantreanKlinik(
       {required String noKtp,
@@ -127,7 +263,7 @@ class API {
       options: Options(
         headers: {
           "Content-Type": "application/json",
-          "MTR": token.token,
+          "X-Api-Token": token.token,
         },
       ),
       data: data,
@@ -155,7 +291,7 @@ class API {
       options: Options(
         headers: {
           "Content-Type": "application/json",
-          "MTR": token.token,
+          "X-Api-Token": token.token,
         },
       ),
       data: data,
@@ -206,7 +342,7 @@ class API {
       options: Options(
         headers: {
           "Content-Type": "application/json",
-          "MTR": token.token,
+          "X-Api-Token": token.token,
         },
       ),
       data: data,
@@ -244,40 +380,40 @@ class API {
     return obj;
   }
 
-  static Future<Poli> getPoli() async {
-    var token = Publics.controller.getToken.value;
-    var data = {"kk": _kodeKlinik};
-    var response = await Dio().post(
-      _getPoli,
-      options: Options(
-        headers: {
-          "Content-Type": "application/json",
-          "MTR": token.token,
-        },
-      ),
-      data: data,
-    );
-    final obj = Poli.fromJson(jsonDecode(response.data));
-    if (obj.msg == 'Invalid token: Expired') {
-      Get.offAllNamed(Routes.LOGIN);
-      Get.snackbar(
-        obj.code.toString(),
-        obj.msg.toString(),
-      );
-    }
-    return obj;
-  }
+  // static Future<Poli> getPoli() async {
+  //   var token = Publics.controller.getToken.value;
+  //   var data = {"kk": _kodeKlinik};
+  //   var response = await Dio().post(
+  //     _getPoli,
+  //     options: Options(
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //         "X-Api-Token": token.token,
+  //       },
+  //     ),
+  //     data: data,
+  //   );
+  //   final obj = Poli.fromJson(jsonDecode(response.data));
+  //   if (obj.msg == 'Invalid token: Expired') {
+  //     Get.offAllNamed(Routes.LOGIN);
+  //     Get.snackbar(
+  //       obj.code.toString(),
+  //       obj.msg.toString(),
+  //     );
+  //   }
+  //   return obj;
+  // }
 
   static Future<GetAllDokterKlinik> getAllDokterKlinik(
-      {required String filter}) async {
-    var data = {"filter": filter};
+      {required String kode_bagian, required String provinsi, required String kota}) async {
+    var data = {"kode_bagian": kode_bagian, "provinsi" : provinsi, "kota": kota};
     final token = Publics.controller.getToken.value;
     var response = await Dio().post(
       _getAllDokterKlinik,
       options: Options(
         headers: {
           "Content-Type": "application/json",
-          "MTR": token.token,
+          "X-Api-Token": token.token,
         },
       ),
       data: data,
@@ -303,7 +439,7 @@ class API {
       options: Options(
         headers: {
           "Content-Type": "application/json",
-          "MTR": token.token,
+          "X-Api-Token": token.token,
         },
       ),
       data: data,
@@ -353,7 +489,7 @@ class API {
       options: Options(
         headers: {
           "Content-Type": "application/json",
-          "MTR": token.token,
+          "X-Api-Token": token.token,
         },
       ),
       data: data,
@@ -378,7 +514,7 @@ class API {
       options: Options(
         headers: {
           "Content-Type": "application/json",
-          "MTR": token.token,
+          "X-Api-Token": token.token,
         },
       ),
       data: data,
@@ -403,7 +539,7 @@ class API {
       options: Options(
         headers: {
           "Content-Type": "application/json",
-          "MTR": token.token,
+          "X-Api-Token": token.token,
         },
       ),
       data: data,
@@ -438,7 +574,7 @@ class API {
       options: Options(
         headers: {
           "Content-Type": "application/json",
-          "MTR": token.token,
+          "X-Api-Token": token.token,
         },
       ),
       data: data,
@@ -477,7 +613,7 @@ class API {
       options: Options(
         headers: {
           "Content-Type": "application/json",
-          "MTR": token.token,
+          "X-Api-Token": token.token,
         },
       ),
       data: data,
@@ -503,7 +639,7 @@ class API {
       options: Options(
         headers: {
           "Content-Type": "application/json",
-          "MTR": token.token,
+          "X-Api-Token": token.token,
         },
       ),
       data: data,
@@ -528,7 +664,7 @@ class API {
       options: Options(
         headers: {
           "Content-Type": "application/json",
-          "MTR": token.token,
+          "X-Api-Token": token.token,
         },
       ),
       data: data,
@@ -554,7 +690,7 @@ class API {
       options: Options(
         headers: {
           "Content-Type": "application/json",
-          "MTR": token.token,
+          "X-Api-Token": token.token,
         },
       ),
       data: data,
@@ -580,7 +716,7 @@ class API {
       options: Options(
         headers: {
           "Content-Type": "application/json",
-          "MTR": token.token,
+          "X-Api-Token": token.token,
         },
       ),
       data: data,
@@ -612,7 +748,7 @@ class API {
   //     options: Options(
   //       headers: {
   //         "Content-Type": "application/json",
-  //         "MTR": token.token,
+  //         "X-Api-Token": token.token,
   //       },
   //     ),
   //     data: data,
@@ -637,7 +773,7 @@ class API {
       options: Options(
         headers: {
           "Content-Type": "application/json",
-          "MTR": token.token,
+          "X-Api-Token": token.token,
         },
       ),
       data: data,
@@ -674,7 +810,7 @@ class API {
       options: Options(
         headers: {
           "Content-Type": "application/json",
-          "MTR": token.token,
+          "X-Api-Token": token.token,
         },
       ),
       data: data,
@@ -715,7 +851,7 @@ class API {
       options: Options(
         headers: {
           "Content-Type": "application/json",
-          "MTR": token.token,
+          "X-Api-Token": token.token,
         },
       ),
       data: data,
@@ -741,7 +877,7 @@ class API {
       options: Options(
         headers: {
           "Content-Type": "application/json",
-          "MTR": token.token,
+          "X-Api-Token": token.token,
         },
       ),
       data: data,
@@ -770,7 +906,7 @@ class API {
       options: Options(
         headers: {
           "Content-Type": "application/json",
-          "MTR": token.token,
+          "X-Api-Token": token.token,
         },
       ),
       data: data,
@@ -801,7 +937,7 @@ class API {
       options: Options(
         headers: {
           "Content-Type": "application/json",
-          "MTR": token.token,
+          "X-Api-Token": token.token,
         },
       ),
       data: data,
@@ -836,7 +972,7 @@ class API {
       options: Options(
         headers: {
           "Content-Type": "application/json",
-          "MTR": token.token,
+          "X-Api-Token": token.token,
         },
       ),
       data: data,
@@ -872,7 +1008,7 @@ class API {
       options: Options(
         headers: {
           "Content-Type": "application/json",
-          "MTR": token.token,
+          "X-Api-Token": token.token,
         },
       ),
       data: data,
@@ -907,7 +1043,7 @@ class API {
       options: Options(
         headers: {
           "Content-Type": "application/json",
-          "MTR": token.token,
+          "X-Api-Token": token.token,
         },
       ),
       data: data,
@@ -931,7 +1067,7 @@ class API {
       options: Options(
         headers: {
           "Content-Type": "application/json",
-          "MTR": token.token,
+          "X-Api-Token": token.token,
         },
       ),
     );

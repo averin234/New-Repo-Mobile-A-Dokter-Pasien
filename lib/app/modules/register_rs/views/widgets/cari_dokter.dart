@@ -7,6 +7,7 @@ import 'package:adokter/app/modules/register_rs/controllers/register_rs_controll
 import 'package:adokter/app/modules/register_rs/views/widgets/widget_listview_poli.dart';
 import 'package:search_page/search_page.dart';
 
+import '../../../../data/model/list_data.dart';
 import '../../../../data/model/regist_rs/all_dokter_klinik.dart';
 
 class CariDokter extends StatefulWidget {
@@ -33,7 +34,7 @@ class _CariDokterState extends State<CariDokter> {
             height: 10,
           ),
           FutureBuilder(
-              future: API.getPoli(),
+              future: API.getSpesialisasi(),
               builder: (context, snapshot) {
                 if (snapshot.hasData &&
                     snapshot.connectionState != ConnectionState.waiting &&
@@ -77,7 +78,7 @@ class AppTextField extends StatelessWidget {
   void onTextFieldTap(context) {
     final controller = Get.put(RegisterRsController());
     FutureBuilder(
-        future: API.getAllDokterKlinik(filter: ''),
+        future: API.getAllDokterKlinik(provinsi: '', kode_bagian: '', kota: ''),
         builder: (context, snapshot) {
           if (snapshot.hasData &&
               snapshot.connectionState != ConnectionState.waiting &&
@@ -132,7 +133,7 @@ class AppTextField extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         FutureBuilder(
-            future: API.getAllDokterKlinik(filter: ''),
+            future: API.getAllDokterKlinik(provinsi: '', kode_bagian: '', kota: ''),
             builder: (context, snapshot) {
               if (snapshot.hasData &&
                   snapshot.connectionState != ConnectionState.waiting &&

@@ -233,7 +233,7 @@ class WidgetStraggeredGridView extends StatelessWidget {
               child: Column(
                 children: [
                   const Text(
-                      "Anda Belum Terdaftar atau Login di Aplikasi SIRS Rumah Sakit Pluit",
+                      "Anda Belum Terdaftar atau Login di Aplikasi A-Dokter",
                       style: TextStyle(
                           color: Colors.black45,
                           fontSize: 18,
@@ -243,7 +243,7 @@ class WidgetStraggeredGridView extends StatelessWidget {
                     height: 5,
                   ),
                   const Text(
-                      "Silahkan daftar atau Login untuk bisa melakukan registrasi poliklinik",
+                      "Silahkan daftar atau Login untuk bisa melakukan registrasi untuk mengunakan A-Dokter",
                       style: TextStyle(color: Colors.black45, fontSize: 15),
                       textAlign: TextAlign.center),
                   const SizedBox(

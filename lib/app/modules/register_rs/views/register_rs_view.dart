@@ -124,25 +124,25 @@ class RegisterRsView extends GetView<RegisterRsController> {
                           child: Text('Daftar Dokter Spesialisasi',
                               style: TextStyle(fontWeight: FontWeight.bold)),
                         ),
-                        // Padding(
-                        //   padding: EdgeInsets.only(right: 10, left: 10),
-                        //   child: Row(
-                        //     children: <Widget>[
-                        //       Expanded(child: DropDownListExample()),
-                        //       SizedBox(
-                        //         width: 10,
-                        //       ),
-                        //       Expanded(child: CariDokter()),
-                        //     ],
-                        //   ),
-                        // ),
+                        Padding(
+                          padding: EdgeInsets.only(right: 10, left: 10),
+                          child: Row(
+                            children: <Widget>[
+                              Expanded(child: DropDownListExample()),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Expanded(child: CariDokter()),
+                            ],
+                          ),
+                        ),
                         const SizedBox(
                           height: 10,
                         ),
                         Obx(() {
                           return FutureBuilder(
                             future: API.getAllDokterKlinik(
-                                filter: controller.namaBagian.value),
+                                kode_bagian: controller.kode_bagian.value,kota: controller.kota.value, provinsi: controller.provinsi.value),
                             builder: (context, snapshot) {
                               if (snapshot.hasData &&
                                   snapshot.connectionState !=
