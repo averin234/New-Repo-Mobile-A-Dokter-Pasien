@@ -9,7 +9,7 @@ class WidgetTitleAntrian extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Color(0xff4babe7),
+        color: Color(0xffDBF6FD),
       ),
       child: Padding(
         padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
@@ -18,7 +18,7 @@ class WidgetTitleAntrian extends StatelessWidget {
           children: [
             Text("Penting !!",
                 style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.black,
                     fontWeight: FontWeight.bold,
                     fontSize: 17)),
             SizedBox(
@@ -27,7 +27,7 @@ class WidgetTitleAntrian extends StatelessWidget {
             Text(
                 "Pasin Tidak Terdaftar di Klinik, Harap membawa KTP Saat datang ke Klinik Guna Melakukan Verifikasi",
                 style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.black,
                     fontWeight: FontWeight.normal,
                     fontSize: 14)),
             Text(msg),

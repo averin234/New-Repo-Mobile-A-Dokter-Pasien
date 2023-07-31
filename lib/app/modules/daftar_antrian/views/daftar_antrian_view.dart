@@ -19,7 +19,7 @@ class DaftarAntrianView extends GetView<DaftarAntrianController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff4babe7),
+      backgroundColor: Color(0xffDBF6FD),
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
@@ -30,7 +30,7 @@ class DaftarAntrianView extends GetView<DaftarAntrianController> {
             stretch: true,
             leading: IconButton(
                 icon: const Icon(Icons.arrow_circle_left_rounded),
-                color: Colors.blue,
+                color: Color(0xff00AFC1),
                 iconSize: 40,
                 onPressed: () {
                   Get.back();
@@ -41,7 +41,7 @@ class DaftarAntrianView extends GetView<DaftarAntrianController> {
                   fontSize: MyFontSize.large1, fontWeight: FontWeight.bold),
             ),
             bottom: AppBar(
-              backgroundColor: Color(0xff4babe7),
+              backgroundColor: const Color(0xffDBF6FD),
               shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.vertical(
                   bottom: Radius.circular(0.0),

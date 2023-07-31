@@ -19,7 +19,7 @@ class HorizontalWeekCalendarPackage1 extends GetView<DaftarAntrianController> {
             child: Text(
               'Tanggal Antrian',
               style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                    color: Colors.white,
+                    color: Colors.black,
                     fontSize: 15,
                   ),
             ),
@@ -35,11 +35,11 @@ class HorizontalWeekCalendarPackage1 extends GetView<DaftarAntrianController> {
               controller.date.value = DateFormat('yyyy-MM-dd').format(date);
             },
             leftMargin: 60,
-            monthColor: Colors.white,
-            dayColor: Colors.white70,
-            activeDayColor: Colors.blue,
-            activeBackgroundDayColor: Colors.white,
-            dotsColor: Colors.blue,
+            monthColor: Colors.black,
+            dayColor: Colors.grey,
+            activeDayColor: Colors.white,
+            activeBackgroundDayColor: Color(0xff00AFC1),
+            dotsColor: Colors.white,
           ),
         ],
       ),

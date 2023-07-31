@@ -42,7 +42,7 @@ class _RubahPasswordViewState extends State<RubahPasswordView> {
             Get.back();
           },
           iconSize: 40,
-          color: Colors.blue,
+          color: Color(0xff00AFC1),
           icon: const Icon(Icons.arrow_circle_left_rounded),
         ),
         actions: [
@@ -53,7 +53,7 @@ class _RubahPasswordViewState extends State<RubahPasswordView> {
                 onPressed: () => Get.toNamed(Routes.EDIT_PROFILE),
                 icon: const Icon(
                   Icons.edit_note_rounded,
-                  color: Colors.blue,
+                  color: Color(0xff00AFC1),
                   size: 40,
                 ),
               ),

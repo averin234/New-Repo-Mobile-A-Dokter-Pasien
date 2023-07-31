@@ -26,7 +26,7 @@ class SettingProfileView extends GetView<SettingProfileController> {
             Get.back();
           },
           iconSize: 40,
-          color: Colors.blue,
+          color: Color(0xff00AFC1),
           icon: const Icon(Icons.arrow_circle_left_rounded),
         ),
         title: Text(

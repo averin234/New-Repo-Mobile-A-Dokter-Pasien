@@ -23,7 +23,7 @@ class ProfilePasienView extends GetView<ProfilePasienController> {
             stretch: true,
             leading: IconButton(
                 icon: const Icon(Icons.arrow_circle_left_rounded),
-                color: Colors.blue,
+                color:Color(0xff00AFC1),
                 iconSize: 40,
                 onPressed: () {
                   Get.back();

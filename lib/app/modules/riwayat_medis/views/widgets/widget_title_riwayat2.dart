@@ -12,7 +12,7 @@ class _WidgetTitleRiwayat2State extends State<WidgetTitleRiwayat2> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Color(0xff4babe7),
+        color: Color(0xffDBF6FD),
         borderRadius: BorderRadius.only(
           topRight: Radius.circular(20.0),
           topLeft: Radius.circular(20.0),
@@ -24,12 +24,12 @@ class _WidgetTitleRiwayat2State extends State<WidgetTitleRiwayat2> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-                "Informasi",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 18)),
+                "Informasi",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 18)),
             Row(
         children: [
           Expanded(
             child: Text(
-                "Catatan kesehatan dan informasi mengenai identifikasi pasien.",style: TextStyle(color: Colors.white)),
+                "Catatan kesehatan dan informasi mengenai identifikasi pasien.",style: TextStyle(color: Colors.black)),
           ),
           SizedBox(
             width: 10,

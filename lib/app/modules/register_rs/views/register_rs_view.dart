@@ -28,10 +28,6 @@ class RegisterRsView extends GetView<RegisterRsController> {
         slivers: [
           SliverAppBar(
             flexibleSpace: const FlexibleSpaceBar(
-                // background: Image.asset(
-                //   'assets/images/frame1.png',
-                //   fit: BoxFit.cover,
-                // ),
                 ),
             automaticallyImplyLeading: true,
             floating: true,
@@ -63,6 +59,10 @@ class RegisterRsView extends GetView<RegisterRsController> {
                   ),
                   Row(
                     children: <Widget>[
+                      Icon(
+                        Icons.not_listed_location,
+                        color: Color(0xff00AFC1),
+                      ),
                       Expanded(
                           child: Text(
                         'Pilih Klinik Terdekat',
@@ -70,7 +70,8 @@ class RegisterRsView extends GetView<RegisterRsController> {
                             fontSize: 13,
                             color: Colors.black,
                             fontWeight: FontWeight.bold),
-                      )),
+                      ),
+                      ),
                       SizedBox(
                         width: 10,
                       ),
@@ -83,11 +84,15 @@ class RegisterRsView extends GetView<RegisterRsController> {
                         width: 10,
                       ),
                       Expanded(child: DropDownkecamatan()),
+                      SizedBox(
+                        width: 5,
+                      ),
                     ],
                   ),
                   SizedBox(
                     height: 5,
-                  )
+                  ),
+
                 ],
               ),
             ),

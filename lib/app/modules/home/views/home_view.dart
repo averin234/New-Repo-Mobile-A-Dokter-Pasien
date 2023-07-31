@@ -1,3 +1,4 @@
+import 'package:adokter/app/modules/home/views/widgets/dropdwon_wilayah.dart';
 import 'package:flutter/material.dart';
 import 'package:adokter/app/modules/home/views/widgets/slider.dart';
 import 'package:adokter/app/modules/shammer/shimmer_antrihome.dart';
@@ -18,6 +19,7 @@ import 'package:adokter/app/modules/home/views/widgets/widget_title2.dart';
 import 'package:adokter/app/routes/app_pages.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
+import '../../register_rs/views/widgets/dropdown_kota.dart';
 import '../controllers/home_controller.dart';
 
 class HomeView1 extends StatefulWidget {
@@ -78,8 +80,10 @@ class _HomeView1State extends State<HomeView1> {
           actions: [
             Row(
               children: [
-                Text("Jakarta Selatan"),
-                Icon(Icons.location_on_rounded, color: Colors.blue),
+                SizedBox(
+                  height: 15,
+                ),
+                DropDownWilayah(),
               ],
             ),
             SizedBox(
