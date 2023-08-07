@@ -14,7 +14,6 @@ import 'package:adokter/app/modules/register_rs/controllers/register_rs_controll
 import 'package:adokter/app/modules/register_rs/views/widgets/widget_dropdownListExample.dart';
 import 'package:adokter/app/modules/register_rs/views/widgets/widget_listview_poli.dart';
 import 'package:adokter/app/modules/register_rs/views/widgets/widget_title_poli2.dart';
-import 'package:search_page/search_page.dart';
 import '../../../data/componen/my_font_size.dart';
 
 class RegisterRsView extends GetView<RegisterRsController> {
