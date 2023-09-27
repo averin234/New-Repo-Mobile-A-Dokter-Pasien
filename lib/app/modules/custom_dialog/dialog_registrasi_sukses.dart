@@ -65,7 +65,7 @@ class DialogSuksesRegis extends StatelessWidget {
                       color: Colors.blue,
                     ),
                     child: Text(
-                      "Lihat Antrian",
+                      "Lihat Antrean",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Colors.white,

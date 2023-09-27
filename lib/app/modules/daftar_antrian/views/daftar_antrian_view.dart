@@ -36,7 +36,7 @@ class DaftarAntrianView extends GetView<DaftarAntrianController> {
                   Get.back();
                 }),
             title: Text(
-              "Daftar Antrian",
+              "Daftar Antrean",
               style: GoogleFonts.nunito(
                   fontSize: MyFontSize.large1, fontWeight: FontWeight.bold),
             ),
@@ -88,7 +88,7 @@ class DaftarAntrianView extends GetView<DaftarAntrianController> {
                     ),
                     Container(
                       margin: EdgeInsets.only(left: 20, bottom: 0),
-                      child: Text("Antrian Saat ini",
+                      child: Text("Antrean Saat ini",
                           style: MyStyle.textTitleBlack),
                     ),
                     FutureBuilder(

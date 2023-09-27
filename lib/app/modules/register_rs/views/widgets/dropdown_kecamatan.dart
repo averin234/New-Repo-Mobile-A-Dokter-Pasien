@@ -7,7 +7,6 @@ import 'package:adokter/app/modules/register_rs/controllers/register_rs_controll
 
 import '../../../../data/model/list_data.dart';
 
-
 class DropDownkecamatan extends StatefulWidget {
   const DropDownkecamatan({
     Key? key,
@@ -32,25 +31,26 @@ class _DropDownkecamatanState extends State<DropDownkecamatan> {
           const SizedBox(
             height: 10,
           ),
-          Obx(() =>
-          FutureBuilder(
-              future: API.getKota(id_prov: controller.provinsi.value),
-              builder: (context, snapshot) {
-                if (snapshot.hasData &&
-                    snapshot.connectionState != ConnectionState.waiting &&
-                    snapshot.data != null) {
-                  final data = snapshot.data!;
-                  return AppTextField(
-                    textEditingController: _cityTextEditingController,
-                    hint: "Kecamatan",
-                    isCitySelected: true,
-                    lists: data.list!,
-                    title: '',
-                  );
-                } else {
-                  return Container();
-                }
-              }),),
+          Obx(
+            () => FutureBuilder(
+                future: API.getKota(id_prov: controller.provinsi.value),
+                builder: (context, snapshot) {
+                  if (snapshot.hasData &&
+                      snapshot.connectionState != ConnectionState.waiting &&
+                      snapshot.data != null) {
+                    final data = snapshot.data!;
+                    return AppTextField(
+                      textEditingController: _cityTextEditingController,
+                      hint: "Kota",
+                      isCitySelected: true,
+                      lists: data.list ?? [Lists()],
+                      title: '',
+                    );
+                  } else {
+                    return Container();
+                  }
+                }),
+          ),
         ],
       ),
     );
@@ -95,17 +95,17 @@ class AppTextField extends StatelessWidget {
                             foregroundColor: Colors.black,
                             padding: const EdgeInsets.symmetric(vertical: 20)),
                         child: Text(
-                          e.nama!,
+                          e.nama ?? '',
                           style: GoogleFonts.nunito(
                             fontSize: 17.0,
                           ),
                           textAlign: TextAlign.start,
                         ),
                         onPressed: () {
-                          textEditingController.text = e.nama!;
-                          controller.kecamatan.value = e.kode!;
+                          textEditingController.text = e.nama ?? '';
+                          controller.kota.value = e.kode ?? '';
                           Get.back();
-                          },
+                        },
                       ),
                     )
                     .toList(),

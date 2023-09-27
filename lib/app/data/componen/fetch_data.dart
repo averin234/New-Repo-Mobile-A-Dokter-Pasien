@@ -53,6 +53,7 @@ class API {
   static const _scanAntrianKlinik = '$_baseUrl/scan_antrian_klinik.php';
   static const _getDataPasien = '$_baseUrl/get-data-pasien.php';
   static const _getDataPx = '$_baseUrl/get-data-px.php';
+  static const _cekDataPx = '$_baseUrl/cek-data-px.php';
   static const _editPasienLama = '$_baseUrl/edit_pasien_lama.php';
   static const _editFotoPasien = '$_baseUrl/edit_foto_pasien.php';
   static const _editFotoKtp = '$_baseUrl/edit_foto_ktp.php';
@@ -72,6 +73,7 @@ class API {
       "v": "1.0",
     });
     final data = jsonDecode(response.data);
+    print(data);
     final obj = Token.fromJson(data);
     await LocalStorages.setToken(obj);
     return obj;
@@ -808,6 +810,25 @@ class API {
     return obj;
   }
 
+  static Future<DataPx> cekDataPx({required String noKtp}) async {
+    var token = Publics.controller.getToken.value;
+    var data = {"nt": noKtp};
+    var response = await Dio().post(
+      _cekDataPx,
+      options: Options(
+        headers: {
+          "Content-Type": "application/json",
+          "X-Api-Token": token.token,
+        },
+      ),
+      data: data,
+    );
+    final json = jsonDecode(response.data);
+    print(json);
+    final obj = DataPx.fromJson(json);
+    return obj;
+  }
+
   static Future<DataPx> getDataPx({required String noKtp}) async {
     var token = Publics.controller.getToken.value;
     var data = {"nt": noKtp};
@@ -822,6 +843,7 @@ class API {
       data: data,
     );
     final json = jsonDecode(response.data);
+    print(json);
     final obj = DataPx.fromJson(json);
     return obj;
   }

@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../../data/model/homepage/detail_klinik.dart';
 
 class WidgetInfo extends StatefulWidget {
-  final DetailKlinik detailklinik;
-  const WidgetInfo({Key? key, required this.detailklinik}) : super(key: key);
+  const WidgetInfo({Key? key}) : super(key: key);
 
   @override
   _WidgetInfoState createState() => _WidgetInfoState();

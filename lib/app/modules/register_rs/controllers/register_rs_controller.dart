@@ -2,10 +2,10 @@ import 'package:get/get.dart';
 
 class RegisterRsController extends GetxController {
   //TODO: Implement RegisterRsController
-  final kode_bagian = '1'.obs;
-  final provinsi = '1'.obs;
-  final kota = '1'.obs;
-  final kecamatan = '1'.obs;
+  final kode_bagian = ''.obs;
+  final provinsi = ''.obs;
+  final kota = ''.obs;
+  final kecamatan = ''.obs;
   final isNoHome = (Get.arguments ?? false) as bool;
 
   String rangeHari(String rangeHari) {

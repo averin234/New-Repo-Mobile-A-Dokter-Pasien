@@ -4,8 +4,8 @@ import 'package:adokter/app/data/componen/publics.dart';
 import 'package:adokter/app/data/model/login_and_regist/token.dart';
 
 class LocalStorages {
-  static GetStorage boxToken = GetStorage('token_pluit');
-  static GetStorage boxDataRegist = GetStorage('dataRegist_pluit');
+  static GetStorage boxToken = GetStorage('token_adokter');
+  static GetStorage boxDataRegist = GetStorage('dataRegist_adokter');
   static Future<void> setToken(Token token) async {
     Token tokens = getToken;
     await boxToken.erase();

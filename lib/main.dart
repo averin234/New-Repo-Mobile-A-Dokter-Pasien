@@ -19,16 +19,16 @@ void main() async {
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
   ]);
-  await GetStorage.init('token_pluit');
-  await GetStorage.init('dataRegist_pluit');
-  DataPx cekData = await API.getDataPx(
+  await GetStorage.init('token_adokter');
+  await GetStorage.init('dataRegist_adokter');
+  DataPx cekData = await API.cekDataPx(
       noKtp: Publics.controller.getDataRegist.value.noKtp ?? '');
-  runApp(MyApp(msg: cekData.msg ?? 'Invalid token: Expired'));
+  runApp(MyApp(code: cekData.code ?? 500));
 }
 
 class MyApp extends StatelessWidget {
-  final String? msg;
-  const MyApp({super.key, this.msg});
+  final int? code;
+  const MyApp({super.key, this.code});
 
   @override
   Widget build(BuildContext context) {
@@ -42,10 +42,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      initialRoute: msg == 'Invalid token: Expired' ||
-              msg == 'Invalid token: Incomplete segments'
-          ? Routes.NO_HOME
-          : Routes.HOME,
+      initialRoute: code == 500 ? Routes.NO_HOME : Routes.HOME,
       getPages: AppPages.routes,
     );
   }

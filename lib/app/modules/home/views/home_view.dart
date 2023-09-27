@@ -49,6 +49,7 @@ class _HomeView1State extends State<HomeView1> {
           toolbarHeight: 70,
           backgroundColor: MyColors.white,
           title: ListTile(
+            dense: true,
             leading: GestureDetector(
               onTap: () => Get.toNamed(Routes.SETTING_PROFILE),
               child: CircleAvatar(
@@ -76,20 +77,11 @@ class _HomeView1State extends State<HomeView1> {
                   color: Colors.black,
                   fontSize: 11),
             ),
+            trailing: Icon(
+              Icons.location_on_rounded,
+              color: Color(0xff00AFC1),
+            ),
           ),
-          actions: [
-            Row(
-              children: [
-                SizedBox(
-                  height: 15,
-                ),
-                DropDownWilayah(),
-              ],
-            ),
-            SizedBox(
-              width: 10,
-            ),
-          ],
           automaticallyImplyLeading: false,
           elevation: 0,
           shadowColor: Colors.blue),
@@ -100,21 +92,7 @@ class _HomeView1State extends State<HomeView1> {
         child: ListView(
           children: [
             // ImageSliderDemo(),
-            FutureBuilder(
-              future: API.getDetailKlinik(),
-              builder: (context, snapshot) {
-                if (snapshot.hasData &&
-                    snapshot.connectionState != ConnectionState.waiting &&
-                    snapshot.data != null) {
-                  final data = snapshot.data!;
-                  return WidgetInfo(
-                    detailklinik: data,
-                  );
-                } else {
-                  return const shimmernohome();
-                }
-              },
-            ),
+            WidgetInfo(),
             SizedBox(
               height: 10,
             ),
