@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class garisbiru extends StatelessWidget {
@@ -10,7 +9,7 @@ class garisbiru extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        SizedBox(
+        const SizedBox(
           width: 2,
         ),
         Container(
@@ -19,9 +18,9 @@ class garisbiru extends StatelessWidget {
             color: Colors.blue,
             borderRadius: BorderRadius.circular(5),
           ),
-          child: Text('irwan',style: TextStyle(color: Colors.transparent,fontSize: 5)),
+          child: const Text('irwan',style: TextStyle(color: Colors.transparent,fontSize: 5)),
         ),
-        SizedBox(
+        const SizedBox(
           width: 2,
         ),
         Container(
@@ -30,9 +29,9 @@ class garisbiru extends StatelessWidget {
             color: Colors.blue,
             borderRadius: BorderRadius.circular(5),
           ),
-          child: Text('irwan',style: TextStyle(color: Colors.transparent,fontSize: 5)),
+          child: const Text('irwan',style: TextStyle(color: Colors.transparent,fontSize: 5)),
         ),
-        SizedBox(
+        const SizedBox(
           width: 2,
         ),
         Container(
@@ -41,9 +40,9 @@ class garisbiru extends StatelessWidget {
             color: Colors.blue,
             borderRadius: BorderRadius.circular(5),
           ),
-          child: Text('irwan',style: TextStyle(color: Colors.transparent,fontSize: 5)),
+          child: const Text('irwan',style: TextStyle(color: Colors.transparent,fontSize: 5)),
         ),
-        SizedBox(
+        const SizedBox(
           width: 2,
         ),
         Container(
@@ -52,9 +51,9 @@ class garisbiru extends StatelessWidget {
             color: Colors.blue,
             borderRadius: BorderRadius.circular(5),
           ),
-          child: Text('irwan',style: TextStyle(color: Colors.transparent,fontSize: 5)),
+          child: const Text('irwan',style: TextStyle(color: Colors.transparent,fontSize: 5)),
         ),
-        SizedBox(
+        const SizedBox(
           width: 2,
         ),
         Container(
@@ -63,9 +62,9 @@ class garisbiru extends StatelessWidget {
             color: Colors.blue,
             borderRadius: BorderRadius.circular(5),
           ),
-          child: Text('irwan',style: TextStyle(color: Colors.transparent,fontSize: 5)),
+          child: const Text('irwan',style: TextStyle(color: Colors.transparent,fontSize: 5)),
         ),
-        SizedBox(
+        const SizedBox(
           width: 2,
         ),
         Container(
@@ -74,9 +73,9 @@ class garisbiru extends StatelessWidget {
             color: Colors.blue,
             borderRadius: BorderRadius.circular(5),
           ),
-          child: Text('irwan',style: TextStyle(color: Colors.transparent,fontSize: 5)),
+          child: const Text('irwan',style: TextStyle(color: Colors.transparent,fontSize: 5)),
         ),
-        SizedBox(
+        const SizedBox(
           width: 2,
         ),
         Container(
@@ -85,9 +84,9 @@ class garisbiru extends StatelessWidget {
             color: Colors.blue,
             borderRadius: BorderRadius.circular(5),
           ),
-          child: Text('irwan',style: TextStyle(color: Colors.transparent,fontSize: 5)),
+          child: const Text('irwan',style: TextStyle(color: Colors.transparent,fontSize: 5)),
         ),
-        SizedBox(
+        const SizedBox(
           width: 2,
         ),
         Container(
@@ -96,9 +95,9 @@ class garisbiru extends StatelessWidget {
             color: Colors.blue,
             borderRadius: BorderRadius.circular(5),
           ),
-          child: Text('irwan',style: TextStyle(color: Colors.transparent,fontSize: 5)),
+          child: const Text('irwan',style: TextStyle(color: Colors.transparent,fontSize: 5)),
         ),
-        SizedBox(
+        const SizedBox(
           width: 2,
         ),
         Container(
@@ -107,9 +106,9 @@ class garisbiru extends StatelessWidget {
             color: Colors.blue,
             borderRadius: BorderRadius.circular(5),
           ),
-          child: Text('irwan',style: TextStyle(color: Colors.transparent,fontSize: 5)),
+          child: const Text('irwan',style: TextStyle(color: Colors.transparent,fontSize: 5)),
         ),
-        SizedBox(
+        const SizedBox(
           width: 2,
         ),
         Container(
@@ -118,9 +117,9 @@ class garisbiru extends StatelessWidget {
             color: Colors.blue,
             borderRadius: BorderRadius.circular(5),
           ),
-          child: Text('irwan',style: TextStyle(color: Colors.transparent,fontSize: 5)),
+          child: const Text('irwan',style: TextStyle(color: Colors.transparent,fontSize: 5)),
         ),
-        SizedBox(
+        const SizedBox(
           width: 2,
         ),
         Container(
@@ -129,9 +128,9 @@ class garisbiru extends StatelessWidget {
             color: Colors.blue,
             borderRadius: BorderRadius.circular(5),
           ),
-          child: Text('irwan',style: TextStyle(color: Colors.transparent,fontSize: 5)),
+          child: const Text('irwan',style: TextStyle(color: Colors.transparent,fontSize: 5)),
         ),
-        SizedBox(
+        const SizedBox(
           width: 2,
         ),
         Container(
@@ -140,9 +139,9 @@ class garisbiru extends StatelessWidget {
             color: Colors.blue,
             borderRadius: BorderRadius.circular(5),
           ),
-          child: Text('irwan',style: TextStyle(color: Colors.transparent,fontSize: 5)),
+          child: const Text('irwan',style: TextStyle(color: Colors.transparent,fontSize: 5)),
         ),
-        SizedBox(
+        const SizedBox(
           width: 2,
         ),
         Container(
@@ -151,9 +150,9 @@ class garisbiru extends StatelessWidget {
             color: Colors.blue,
             borderRadius: BorderRadius.circular(5),
           ),
-          child: Text('irwan',style: TextStyle(color: Colors.transparent,fontSize: 5)),
+          child: const Text('irwan',style: TextStyle(color: Colors.transparent,fontSize: 5)),
         ),
-        SizedBox(
+        const SizedBox(
           width: 2,
         ),
         Container(
@@ -162,9 +161,9 @@ class garisbiru extends StatelessWidget {
             color: Colors.blue,
             borderRadius: BorderRadius.circular(5),
           ),
-          child: Text('irwan',style: TextStyle(color: Colors.transparent,fontSize: 5)),
+          child: const Text('irwan',style: TextStyle(color: Colors.transparent,fontSize: 5)),
         ),
-        SizedBox(
+        const SizedBox(
           width: 2,
         ),
         Container(
@@ -173,9 +172,9 @@ class garisbiru extends StatelessWidget {
             color: Colors.blue,
             borderRadius: BorderRadius.circular(5),
           ),
-          child: Text('irwan',style: TextStyle(color: Colors.transparent,fontSize: 5)),
+          child: const Text('irwan',style: TextStyle(color: Colors.transparent,fontSize: 5)),
         ),
-        SizedBox(
+        const SizedBox(
           width: 2,
         ),
         Container(
@@ -184,9 +183,9 @@ class garisbiru extends StatelessWidget {
             color: Colors.blue,
             borderRadius: BorderRadius.circular(5),
           ),
-          child: Text('irwan',style: TextStyle(color: Colors.transparent,fontSize: 5)),
+          child: const Text('irwan',style: TextStyle(color: Colors.transparent,fontSize: 5)),
         ),
-        SizedBox(
+        const SizedBox(
           width: 2,
         ),
       ],);

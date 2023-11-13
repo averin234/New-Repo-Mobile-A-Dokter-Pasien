@@ -1,8 +1,5 @@
-import 'package:adokter/app/modules/home/views/widgets/dropdwon_wilayah.dart';
 import 'package:flutter/material.dart';
-import 'package:adokter/app/modules/home/views/widgets/slider.dart';
 import 'package:adokter/app/modules/shammer/shimmer_antrihome.dart';
-import 'package:adokter/app/modules/shammer/shimmer_nama_rs.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
@@ -19,7 +16,6 @@ import 'package:adokter/app/modules/home/views/widgets/widget_title2.dart';
 import 'package:adokter/app/routes/app_pages.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
-import '../../register_rs/views/widgets/dropdown_kota.dart';
 import '../controllers/home_controller.dart';
 
 class HomeView1 extends StatefulWidget {
@@ -34,7 +30,7 @@ class _HomeView1State extends State<HomeView1> {
   final RefreshController _refreshController = RefreshController();
 
   Future<void> _onRefresh() async {
-    await Future.delayed(Duration(seconds: 1));
+    await Future.delayed(const Duration(seconds: 1));
     setState(() {
       entries.add(entries.length);
     });
@@ -77,7 +73,7 @@ class _HomeView1State extends State<HomeView1> {
                   color: Colors.black,
                   fontSize: 11),
             ),
-            trailing: Icon(
+            trailing: const Icon(
               Icons.location_on_rounded,
               color: Color(0xff00AFC1),
             ),
@@ -92,8 +88,8 @@ class _HomeView1State extends State<HomeView1> {
         child: ListView(
           children: [
             // ImageSliderDemo(),
-            WidgetInfo(),
-            SizedBox(
+            const WidgetInfo(),
+            const SizedBox(
               height: 10,
             ),
             Padding(
@@ -104,11 +100,11 @@ class _HomeView1State extends State<HomeView1> {
               ),
             ),
             const WidgetStraggeredGridView(),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Padding(
-              padding: EdgeInsets.only(left: 20),
+              padding: const EdgeInsets.only(left: 20),
               child:
                   Text("Antrean anda saat ini", style: MyStyle.textTitleBlack),
             ),
@@ -135,7 +131,7 @@ class _HomeView1State extends State<HomeView1> {
                             return Column(
                               crossAxisAlignment: CrossAxisAlignment.stretch,
                               children: [
-                                Padding(
+                                const Padding(
                                     padding: EdgeInsets.only(
                                         left: 20, top: 0, bottom: 15)),
                                 WidgetCard(lists: {'data': data, 'scan': scan}),
@@ -143,8 +139,8 @@ class _HomeView1State extends State<HomeView1> {
                             );
                           } else {
                             return Container(
-                                margin: EdgeInsets.only(right: 20, top: 10),
-                                child: shimmerAntriHome());
+                                margin: const EdgeInsets.only(right: 20, top: 10),
+                                child: const shimmerAntriHome());
                           }
                         });
                   } else {
@@ -152,8 +148,8 @@ class _HomeView1State extends State<HomeView1> {
                   }
                 } else {
                   return Container(
-                      margin: EdgeInsets.only(right: 20, top: 10),
-                      child: shimmerAntriHome());
+                      margin: const EdgeInsets.only(right: 20, top: 10),
+                      child: const shimmerAntriHome());
                 }
               },
             ),
@@ -175,8 +171,8 @@ class _HomeView1State extends State<HomeView1> {
                 ],
               ),
               padding: const EdgeInsets.all(0),
-              child: Column(
-                children: const [
+              child: const Column(
+                children: [
                   SizedBox(
                     height: 10,
                   ),
@@ -199,6 +195,6 @@ class HomeView extends GetView<HomeController> {
 
   @override
   Widget build(BuildContext context) {
-    return HomeView1();
+    return const HomeView1();
   }
 }

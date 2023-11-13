@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:adokter/app/data/componen/my_style.dart';
 
 class WidgetTitleAntrian extends StatelessWidget {
   final String msg;
@@ -8,7 +7,7 @@ class WidgetTitleAntrian extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Color(0xffDBF6FD),
       ),
       child: Padding(
@@ -16,15 +15,15 @@ class WidgetTitleAntrian extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("Penting !!",
+            const Text("Penting !!",
                 style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.bold,
                     fontSize: 17)),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
-            Text(
+            const Text(
                 "Pasin Tidak Terdaftar di Klinik, Harap membawa KTP Saat datang ke Klinik Guna Melakukan Verifikasi",
                 style: TextStyle(
                     color: Colors.black,

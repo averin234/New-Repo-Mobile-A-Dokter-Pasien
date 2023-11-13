@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../text_column.dart';
 
 class WorkTextColumn extends StatelessWidget {
-  const WorkTextColumn();
+  const WorkTextColumn({super.key});
 
   @override
   Widget build(BuildContext context) {

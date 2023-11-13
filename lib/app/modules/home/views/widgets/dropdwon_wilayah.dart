@@ -20,7 +20,7 @@ class _DropDownWilayahState extends State<DropDownWilayah> {
 
   @override
   Widget build(BuildContext context) {
-    return  Container(
+    return  SizedBox(
       width: 130,
       child:
       Column(
@@ -126,10 +126,10 @@ class AppTextField extends StatelessWidget {
           readOnly: true,
           controller: textEditingController,
           cursorColor: Colors.black,
-          style: TextStyle(fontSize: 14),
+          style: const TextStyle(fontSize: 14),
           onTap: onTextFieldTap,
           decoration: InputDecoration(
-            hintStyle: TextStyle(fontSize: 14),
+            hintStyle: const TextStyle(fontSize: 14),
             filled: true,
             fillColor: Colors.white,
             suffixIcon: const Icon(

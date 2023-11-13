@@ -3,16 +3,16 @@ import 'package:flutter/material.dart';
 import '../../../../../login/views/constants.dart';
 
 class WorkDarkCardContent extends StatelessWidget {
-  const WorkDarkCardContent();
+  const WorkDarkCardContent({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: const [
+          children: [
             Icon(
               Icons.person_pin,
               color: kWhite,
@@ -20,10 +20,10 @@ class WorkDarkCardContent extends StatelessWidget {
             ),
           ],
         ),
-        const SizedBox(height: kSpaceM),
+        SizedBox(height: kSpaceM),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: const [
+          children: [
             Icon(
               Icons.person,
               color: kWhite,

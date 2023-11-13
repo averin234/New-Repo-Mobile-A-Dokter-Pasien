@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../../data/model/homepage/detail_klinik.dart';
 
 class WidgetInfo extends StatefulWidget {
   const WidgetInfo({Key? key}) : super(key: key);
@@ -13,7 +12,7 @@ class _WidgetInfoState extends State<WidgetInfo> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: 0, right: 0, top: 0),
+      margin: const EdgeInsets.only(left: 0, right: 0, top: 0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(0),
         image: const DecorationImage(
@@ -34,23 +33,23 @@ class _WidgetInfoState extends State<WidgetInfo> {
                 'assets/images/dokter1.png',
                 height: 110,
               ),
-              Expanded(
+              const Expanded(
                 child: Column(
                   children: [
                     Text(
                       "A-Dokter Pasien",
-                      style: const TextStyle(
+                      style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
                           color: Color(0xFF00AFC1)),
                       textAlign: TextAlign.center,
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 10,
                     ),
                     Text(
                       "Aplikasi dokter berbasis cloud untuk meningkatkan kualitas pelayanan praktek dokter mandiri",
-                      style: const TextStyle(
+                      style: TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.bold,
                           color: Colors.grey),

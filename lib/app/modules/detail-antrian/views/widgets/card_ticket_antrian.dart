@@ -6,7 +6,6 @@ import 'package:adokter/app/modules/detail-antrian/controllers/detail_antrian_co
 import 'package:adokter/app/routes/app_pages.dart';
 
 import 'garis.dart';
-import 'garis2.dart';
 
 class CardTicketAntrian extends StatelessWidget {
   const CardTicketAntrian({super.key});
@@ -59,10 +58,10 @@ class CardTicketAntrian extends StatelessWidget {
                         fontWeight: FontWeight.bold, fontSize: 15),
                     textAlign: TextAlign.center,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
-                  garisbiru(),
+                  const garisbiru(),
                   const SizedBox(height: 30),
                   Text(
                     "Nomor Antrean",
@@ -100,7 +99,7 @@ class CardTicketAntrian extends StatelessWidget {
                     child: Column(
                       children: [
                         Padding(
-                          padding: EdgeInsets.only(right: 10, left: 10),
+                          padding: const EdgeInsets.only(right: 10, left: 10),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -122,14 +121,14 @@ class CardTicketAntrian extends StatelessWidget {
                             ],
                           ),
                         ),
-                        Divider(
+                        const Divider(
                           color: Colors.grey,
                         ),
                         const SizedBox(
                           height: 11,
                         ),
                         Padding(
-                          padding: EdgeInsets.only(right: 10, left: 10),
+                          padding: const EdgeInsets.only(right: 10, left: 10),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -156,7 +155,7 @@ class CardTicketAntrian extends StatelessWidget {
                         const SizedBox(
                           height: 10,
                         ),
-                        Divider(
+                        const Divider(
                           color: Colors.grey,
                         ),
                         const SizedBox(

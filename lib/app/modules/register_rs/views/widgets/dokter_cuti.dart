@@ -6,11 +6,11 @@ class DokterCuti extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(right: 10, left: 10),
-      padding: EdgeInsets.all(10),
+      margin: const EdgeInsets.only(right: 10, left: 10),
+      padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
           color: Colors.redAccent, borderRadius: BorderRadius.circular(10)),
-      child: Column(
+      child: const Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Text(

@@ -9,7 +9,6 @@ import 'package:adokter/app/modules/register_rs/views/widgets/jadwal_praktik.dar
 import 'package:text_scroll/text_scroll.dart';
 
 import '../../../../routes/app_pages.dart';
-import 'dokter_cuti.dart';
 
 class CardListViewPoli extends StatelessWidget {
   final Items items;
@@ -78,7 +77,7 @@ class CardListViewPoli extends StatelessWidget {
                     AlertDialog(
                       title: const Text("Profile Dokter"),
                       content: ProfileViewView(
-                        src: items.foto!,
+                        src: items.foto ?? Avatar.lakiLaki,
                         tag: tag,
                       ),
                     ),
@@ -372,7 +371,7 @@ class CardListViewPoli extends StatelessWidget {
                     width: 200,
                     height: 200,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 30,
                   ),
                   Row(

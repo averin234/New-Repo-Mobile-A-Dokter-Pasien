@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:adokter/app/data/componen/fetch_data.dart';
-import 'package:adokter/app/data/model/homepage/poli.dart';
 import 'package:adokter/app/modules/register_rs/controllers/register_rs_controller.dart';
 import 'package:adokter/app/modules/register_rs/views/widgets/widget_listview_poli.dart';
 import 'package:search_page/search_page.dart';

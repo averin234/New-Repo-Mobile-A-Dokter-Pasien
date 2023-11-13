@@ -14,7 +14,7 @@ class EditProfileView extends GetView<EditProfileController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xfff6f9fe),
+      backgroundColor: const Color(0xfff6f9fe),
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
@@ -42,7 +42,7 @@ class EditProfileView extends GetView<EditProfileController> {
           SliverList(
             delegate: SliverChildListDelegate([
               Container(
-                  padding: EdgeInsets.only(top: 10, bottom: 10),
+                  padding: const EdgeInsets.only(top: 10, bottom: 10),
                   decoration: BoxDecoration(
                     color: Colors.redAccent,
                     boxShadow: [
@@ -50,7 +50,7 @@ class EditProfileView extends GetView<EditProfileController> {
                         color: Colors.grey.withOpacity(0.1),
                         spreadRadius: 5,
                         blurRadius: 4,
-                        offset: Offset(0, 0), // changes position of shadow
+                        offset: const Offset(0, 0), // changes position of shadow
                       ),
                     ],
                   ),
@@ -58,7 +58,7 @@ class EditProfileView extends GetView<EditProfileController> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Padding(
-                        padding: EdgeInsets.only(left: 10),
+                        padding: const EdgeInsets.only(left: 10),
                         child: Text(
                           'Penting !!',
                           style: GoogleFonts.nunito(
@@ -67,7 +67,7 @@ class EditProfileView extends GetView<EditProfileController> {
                               fontSize: 13),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 5,
                       ),
                       TextScroll(

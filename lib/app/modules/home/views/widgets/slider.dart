@@ -13,10 +13,12 @@ final List<String> imgList = [
 
 final themeMode = ValueNotifier(2);
 class ImageSliderDemo extends StatelessWidget {
+  const ImageSliderDemo({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Image slider demo')),
+      appBar: AppBar(title: const Text('Image slider demo')),
       body: Container(
           child: CarouselSlider(
             options: CarouselOptions(),

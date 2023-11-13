@@ -4,14 +4,14 @@ import '../../../../../login/views/constants.dart';
 import '../../icon_container.dart';
 
 class WorkLightCardContent extends StatelessWidget {
-  const WorkLightCardContent();
+  const WorkLightCardContent({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: const [
-        const IconContainer(
+      children: [
+        IconContainer(
           icon: Icons.event_seat,
           padding: kPaddingS,
         ),

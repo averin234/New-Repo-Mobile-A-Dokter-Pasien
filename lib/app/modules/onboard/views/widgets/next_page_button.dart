@@ -7,7 +7,7 @@ import '../../../login/views/constants.dart';
 class NextPageButton extends StatelessWidget {
   final VoidCallback onPressed;
 
-  const NextPageButton({
+  const NextPageButton({super.key, 
     required this.onPressed,
   });
 

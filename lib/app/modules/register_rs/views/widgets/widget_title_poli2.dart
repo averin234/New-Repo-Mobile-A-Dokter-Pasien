@@ -11,21 +11,21 @@ class _WidgetTitlePoli2State extends State<WidgetTitlePoli2> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Color(0xffDBF6FD),
       ),
       child: Padding(
-        padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
+        padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
         child: Row(
           children: [
-            Expanded(
+            const Expanded(
               child: Text("Buat Janji dengan dokter sesuai kebutuhanmu.",
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: 15,
                       fontWeight: FontWeight.bold)),
             ),
-            SizedBox(
+            const SizedBox(
               width: 10,
             ),
             Image.asset(

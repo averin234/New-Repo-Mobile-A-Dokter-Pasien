@@ -35,7 +35,7 @@ class RegisterRsView extends GetView<RegisterRsController> {
             stretch: true,
             leading: IconButton(
                 icon: const Icon(Icons.arrow_circle_left_rounded),
-                color: Color(0xff00AFC1),
+                color: const Color(0xff00AFC1),
                 iconSize: 40,
                 onPressed: () {
                   Get.back();
@@ -45,13 +45,13 @@ class RegisterRsView extends GetView<RegisterRsController> {
               style: GoogleFonts.nunito(
                   fontSize: MyFontSize.large1, fontWeight: FontWeight.bold),
             ),
-            actions: [],
+            actions: const [],
             bottom: AppBar(
               backgroundColor: const Color(0xffDBF6FD),
               toolbarHeight: 100,
               automaticallyImplyLeading: false,
               elevation: 0,
-              title: Column(
+              title: const Column(
                 children: [
                   SizedBox(
                     height: 13,
@@ -128,7 +128,7 @@ class RegisterRsView extends GetView<RegisterRsController> {
                           child: Text('Daftar Dokter Spesialisasi',
                               style: TextStyle(fontWeight: FontWeight.bold)),
                         ),
-                        Padding(
+                        const Padding(
                           padding: EdgeInsets.only(right: 10, left: 10),
                           child: Row(
                             children: <Widget>[

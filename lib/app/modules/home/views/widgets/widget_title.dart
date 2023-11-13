@@ -12,7 +12,7 @@ class _WidgetTitleState extends State<WidgetTitle> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.fromLTRB(30, 0, 10, 0),
+      padding: const EdgeInsets.fromLTRB(30, 0, 10, 0),
       child: Text("Fitur", style: MyStyle.textTitleBlack),
     );
   }

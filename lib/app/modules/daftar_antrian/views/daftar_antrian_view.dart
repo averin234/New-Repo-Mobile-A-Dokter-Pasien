@@ -7,7 +7,6 @@ import 'package:adokter/app/data/model/profile_pasien/data_px.dart';
 import 'package:adokter/app/modules/daftar_antrian/controllers/daftar_antrian_controller.dart';
 import 'package:adokter/app/modules/daftar_antrian/views/widgets/widget_listview_antrian.dart';
 import 'package:adokter/app/modules/daftar_antrian/views/widgets/widget_title_antrian.dart';
-import 'package:adokter/app/modules/daftar_antrian/views/widgets/widget_title_antrian4.dart';
 import 'package:adokter/app/modules/daftar_antrian/views/widgets/widgets_select_calender.dart';
 import 'package:adokter/app/modules/home/views/widgets/widget_no_antri.dart';
 import '../../../data/componen/my_font_size.dart';
@@ -19,7 +18,7 @@ class DaftarAntrianView extends GetView<DaftarAntrianController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffDBF6FD),
+      backgroundColor: const Color(0xffDBF6FD),
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
@@ -30,7 +29,7 @@ class DaftarAntrianView extends GetView<DaftarAntrianController> {
             stretch: true,
             leading: IconButton(
                 icon: const Icon(Icons.arrow_circle_left_rounded),
-                color: Color(0xff00AFC1),
+                color: const Color(0xff00AFC1),
                 iconSize: 40,
                 onPressed: () {
                   Get.back();
@@ -50,8 +49,8 @@ class DaftarAntrianView extends GetView<DaftarAntrianController> {
               toolbarHeight: 150,
               elevation: 0,
               automaticallyImplyLeading: false,
-              title: Column(
-                children: const [
+              title: const Column(
+                children: [
                   HorizontalWeekCalendarPackage1(),
                   SizedBox(height: 5)
                 ],
@@ -60,14 +59,14 @@ class DaftarAntrianView extends GetView<DaftarAntrianController> {
           ),
           SliverList(
             delegate: SliverChildListDelegate([
-              WidgetTitleAntrian(
+              const WidgetTitleAntrian(
                 msg: '',
               ),
               Container(
                 height: 1000,
                 decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.only(
+                  borderRadius: const BorderRadius.only(
                     topRight: Radius.circular(20.0),
                     topLeft: Radius.circular(20.0),
                   ),
@@ -83,11 +82,11 @@ class DaftarAntrianView extends GetView<DaftarAntrianController> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Container(
-                      margin: EdgeInsets.only(left: 20, bottom: 0),
+                      margin: const EdgeInsets.only(left: 20, bottom: 0),
                       child: Text("Antrean Saat ini",
                           style: MyStyle.textTitleBlack),
                     ),
@@ -109,9 +108,9 @@ class DaftarAntrianView extends GetView<DaftarAntrianController> {
                           }
                         } else {
                           return Container(
-                              margin: EdgeInsets.only(left: 10),
-                              padding: EdgeInsets.only(top: 30),
-                              child: Column(
+                              margin: const EdgeInsets.only(left: 10),
+                              padding: const EdgeInsets.only(top: 30),
+                              child: const Column(
                                 children: [
                                   shimmerAntrian(),
                                   SizedBox(
@@ -175,7 +174,7 @@ class DaftarAntrianView extends GetView<DaftarAntrianController> {
                 return ListView.builder(
                   itemCount: data.list!.length,
                   shrinkWrap: true,
-                  physics: NeverScrollableScrollPhysics(),
+                  physics: const NeverScrollableScrollPhysics(),
                   itemBuilder: (context, index) {
                     final list = data.list!;
                     return Container(

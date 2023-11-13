@@ -45,7 +45,7 @@ class _WidgetTitle2State extends State<WidgetTitle2> {
             ),
           ],
         ),
-        Text("Buat Janji dengan dokter sesuai kebutuhanmu.",
+        const Text("Buat Janji dengan dokter sesuai kebutuhanmu.",
             style: TextStyle(fontSize: 13)),
       ]),
     );

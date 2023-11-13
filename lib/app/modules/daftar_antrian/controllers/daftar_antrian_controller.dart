@@ -1,6 +1,5 @@
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
-import 'package:adokter/app/data/componen/local_storage.dart';
 import 'package:adokter/app/data/componen/publics.dart';
 
 class DaftarAntrianController extends GetxController {

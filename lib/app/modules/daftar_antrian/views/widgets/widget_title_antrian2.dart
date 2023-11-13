@@ -11,10 +11,10 @@ class _WidgetTitleAntrian2State extends State<WidgetTitleAntrian2> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.fromLTRB(20, 0, 10, 0),
+      padding: const EdgeInsets.fromLTRB(20, 0, 10, 0),
       child: Row(
         children: [
-          Expanded(
+          const Expanded(
             child: Text(
                 "Silahkan datang ke FO dan membawa KTP anda \nuntuk melakukan registrasi ulang"),
           ),
@@ -32,7 +32,7 @@ class _WidgetTitleAntrian2State extends State<WidgetTitleAntrian2> {
           //     fontSize: MyFontSize.medium1,
           //   ),
           // ),
-          SizedBox(
+          const SizedBox(
             width: 10,
           ),
           // Icon(Icons.arrow_forward_ios_outlined, size: 15,)

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:adokter/app/data/componen/my_style.dart';
 
-import '../../../../data/componen/my_font_size.dart';
 
 class WidgetTitleResep extends StatefulWidget {
   const WidgetTitleResep({Key? key}) : super(key: key);

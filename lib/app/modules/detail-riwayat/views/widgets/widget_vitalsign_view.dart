@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:adokter/app/data/model/mr_pasien/detailRiwayat.dart';
 
-import '../../../../data/componen/my_font_size.dart';
-import '../../../../routes/app_pages.dart';
 
 class CardVitalSign extends StatelessWidget {
   final VitalSign vitalSign;

@@ -41,9 +41,9 @@ class MyEntryField extends StatelessWidget {
             textInputAction: TextInputAction.next,
             readOnly: readonly?? false,
             decoration: InputDecoration(
-                border: OutlineInputBorder(
-                  borderRadius: const BorderRadius.all(
-                    const Radius.circular(10.0),
+                border: const OutlineInputBorder(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(10.0),
                   ),
                   borderSide: BorderSide(
                     width: 0,
@@ -51,7 +51,7 @@ class MyEntryField extends StatelessWidget {
                   ),
                 ),
                 suffixIcon: suffixIcon,
-                fillColor: Color(0xffecf8ff),
+                fillColor: const Color(0xffecf8ff),
                 filled: true),
           )
         ],

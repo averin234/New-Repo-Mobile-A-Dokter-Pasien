@@ -3,7 +3,6 @@ import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 
 import 'package:get/get.dart';
 import 'package:adokter/app/data/componen/images.dart';
-import 'package:adokter/app/data/model/regist_rs/all_dokter_klinik.dart';
 import 'package:adokter/app/modules/detail-poli/views/widgets/card_form_poli.dart';
 import 'package:adokter/app/modules/detail-poli/views/widgets/widget_listview_poli_view.dart';
 
@@ -15,7 +14,7 @@ import '../../custom_dialog/dialog_registrasi_sukses.dart';
 import '../controllers/detail_poli_controller.dart';
 
 class DetailPoliView extends GetView<DetailPoliController> {
-  DetailPoliView({Key? key}) : super(key: key);
+  const DetailPoliView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -40,7 +39,7 @@ class DetailPoliView extends GetView<DetailPoliController> {
               centerTitle: true,
               leading: IconButton(
                   icon: const Icon(Icons.arrow_circle_left_rounded),
-                  color: Color(0xff00AFC1),
+                  color: const Color(0xff00AFC1),
                   iconSize: 40,
                   onPressed: () {
                     Get.back();
@@ -57,7 +56,7 @@ class DetailPoliView extends GetView<DetailPoliController> {
                       ),
                     ),
                     children: <Widget>[
-                      CardListViewPoliDetail(),
+                      const CardListViewPoliDetail(),
                       const CardFromPoli(),
                     ],
                   ),
@@ -82,7 +81,7 @@ class DetailPoliView extends GetView<DetailPoliController> {
           margin: const EdgeInsets.symmetric(vertical: 2, horizontal: 0),
           child: Row(
             children: <Widget>[
-              SizedBox(
+              const SizedBox(
                 width: 230,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,

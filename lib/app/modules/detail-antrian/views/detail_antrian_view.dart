@@ -13,7 +13,7 @@ class DetailAntrianView extends GetView<DetailAntrianController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xfff6f9fe),
+      backgroundColor: const Color(0xfff6f9fe),
       body: CustomScrollView(
         slivers: [
           SliverAppBar(

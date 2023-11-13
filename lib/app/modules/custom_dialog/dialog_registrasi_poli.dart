@@ -14,8 +14,8 @@ class DialogRegisPoli extends GetView<DetailPoliController> {
     return Column(
       children: [
         Container(
-          margin: EdgeInsets.only(right: 10, left: 10, top: 200),
-          padding: EdgeInsets.only(
+          margin: const EdgeInsets.only(right: 10, left: 10, top: 200),
+          padding: const EdgeInsets.only(
             left: 10,
             right: 10,
           ),
@@ -64,12 +64,12 @@ class DialogRegisPoli extends GetView<DetailPoliController> {
                     GestureDetector(
                       onTap: () => Get.back(),
                       child: Container(
-                        padding: EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(7),
                           color: Colors.blue,
                         ),
-                        child: Text(
+                        child: const Text(
                           "Kembali",
                           style: TextStyle(
                             color: Colors.white,
@@ -84,7 +84,7 @@ class DialogRegisPoli extends GetView<DetailPoliController> {
                       width: 30,
                     ),
                     Container(
-                      padding: EdgeInsets.all(10),
+                      padding: const EdgeInsets.all(10),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(7),
                         color: Colors.greenAccent,
@@ -118,8 +118,8 @@ class DialogRegisPoli extends GetView<DetailPoliController> {
                             Get.dialog(const DialogSuksesRegis());
                           }
                         },
-                        child: Column(
-                          children: const [
+                        child: const Column(
+                          children: [
                             Text(
                               "Lanjutkan",
                               style: TextStyle(

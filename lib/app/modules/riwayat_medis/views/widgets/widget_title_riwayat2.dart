@@ -11,27 +11,27 @@ class _WidgetTitleRiwayat2State extends State<WidgetTitleRiwayat2> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Color(0xffDBF6FD),
         borderRadius: BorderRadius.only(
           topRight: Radius.circular(20.0),
           topLeft: Radius.circular(20.0),
         ),
       ),
-      padding: EdgeInsets.fromLTRB(20, 10, 10, 0),
+      padding: const EdgeInsets.fromLTRB(20, 10, 10, 0),
       child : Container(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
+            const Text(
                 "Informasi",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 18)),
             Row(
         children: [
-          Expanded(
+          const Expanded(
             child: Text(
                 "Catatan kesehatan dan informasi mengenai identifikasi pasien.",style: TextStyle(color: Colors.black)),
           ),
-          SizedBox(
+          const SizedBox(
             width: 10,
           ),
           Image.asset(
@@ -40,7 +40,7 @@ class _WidgetTitleRiwayat2State extends State<WidgetTitleRiwayat2> {
             height: 90.0,
             fit: BoxFit.cover,
           ),
-          SizedBox(
+          const SizedBox(
             width: 10,
           ),
           // Icon(Icons.arrow_forward_ios_outlined, size: 15,)

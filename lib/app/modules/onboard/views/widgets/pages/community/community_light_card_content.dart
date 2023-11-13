@@ -4,14 +4,14 @@ import '../../../../../login/views/constants.dart';
 import '../../icon_container.dart';
 
 class CommunityLightCardContent extends StatelessWidget {
-  const CommunityLightCardContent();
+  const CommunityLightCardContent({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: const [
-        const IconContainer(
+      children: [
+        IconContainer(
           icon: Icons.person,
           padding: kPaddingS,
         ),

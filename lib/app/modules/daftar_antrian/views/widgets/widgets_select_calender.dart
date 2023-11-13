@@ -38,7 +38,7 @@ class HorizontalWeekCalendarPackage1 extends GetView<DaftarAntrianController> {
             monthColor: Colors.black,
             dayColor: Colors.grey,
             activeDayColor: Colors.white,
-            activeBackgroundDayColor: Color(0xff00AFC1),
+            activeBackgroundDayColor: const Color(0xff00AFC1),
             dotsColor: Colors.white,
           ),
         ],

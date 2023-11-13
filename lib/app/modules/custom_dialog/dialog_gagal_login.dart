@@ -53,8 +53,8 @@ class DialogGagalLogin extends StatelessWidget {
                             borderRadius: BorderRadius.circular(7),
                             color: Colors.blue,
                           ),
-                          child: Column(
-                            children: const [
+                          child: const Column(
+                            children: [
                               Padding(
                                 padding: EdgeInsets.all(16),
                                 child: Text("Kembali",

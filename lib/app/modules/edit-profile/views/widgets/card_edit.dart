@@ -96,8 +96,8 @@ class MyRegister1 extends GetView<EditProfileController> {
           ),
         ),
         Container(
-          margin: EdgeInsets.only(left: 10, right: 10),
-          padding: EdgeInsets.all(10),
+          margin: const EdgeInsets.only(left: 10, right: 10),
+          padding: const EdgeInsets.all(10),
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(10),
@@ -106,7 +106,7 @@ class MyRegister1 extends GetView<EditProfileController> {
                 color: Colors.grey.withOpacity(0.1),
                 spreadRadius: 5,
                 blurRadius: 4,
-                offset: Offset(0, 0), // changes position of shadow
+                offset: const Offset(0, 0), // changes position of shadow
               ),
             ],
           ),

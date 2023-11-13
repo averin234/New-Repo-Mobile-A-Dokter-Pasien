@@ -13,7 +13,7 @@ class ProfilePasienView extends GetView<ProfilePasienController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff4babe7),
+      backgroundColor: const Color(0xff4babe7),
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
@@ -23,7 +23,7 @@ class ProfilePasienView extends GetView<ProfilePasienController> {
             stretch: true,
             leading: IconButton(
                 icon: const Icon(Icons.arrow_circle_left_rounded),
-                color:Color(0xff00AFC1),
+                color:const Color(0xff00AFC1),
                 iconSize: 40,
                 onPressed: () {
                   Get.back();
@@ -49,7 +49,7 @@ class ProfilePasienView extends GetView<ProfilePasienController> {
           // Other Sliver Widgets
           SliverList(
             delegate: SliverChildListDelegate([
-              Column(
+              const Column(
                 children: [
                   CardProfile(readOnly: true),
                 ],

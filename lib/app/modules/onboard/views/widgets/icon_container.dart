@@ -8,7 +8,7 @@ class IconContainer extends StatelessWidget {
   final IconData icon;
   final double padding;
 
-  const IconContainer({
+  const IconContainer({super.key, 
     required this.icon,
     required this.padding,
   });

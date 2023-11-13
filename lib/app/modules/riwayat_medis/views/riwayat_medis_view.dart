@@ -9,7 +9,6 @@ import 'package:adokter/app/modules/riwayat_medis/controllers/riwayat_medis_cont
 import 'package:adokter/app/modules/riwayat_medis/views/widgets/widget_listview_riwayat.dart';
 import 'package:adokter/app/modules/riwayat_medis/views/widgets/widget_title_riwayat2.dart';
 import 'package:adokter/app/modules/riwayat_medis/views/widgets/widget_title_riwayat3.dart';
-import 'package:adokter/app/modules/riwayat_medis/views/widgets/widgets_select_calender.dart';
 import '../../../data/componen/my_font_size.dart';
 
 class RiwayatMedisView extends GetView<RiwayatMedisController> {
@@ -18,7 +17,7 @@ class RiwayatMedisView extends GetView<RiwayatMedisController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffDBF6FD),
+      backgroundColor: const Color(0xffDBF6FD),
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
@@ -29,7 +28,7 @@ class RiwayatMedisView extends GetView<RiwayatMedisController> {
             stretch: true,
             leading: IconButton(
                 icon: const Icon(Icons.arrow_circle_left_rounded),
-                color: Color(0xff00AFC1),
+                color: const Color(0xff00AFC1),
                 iconSize: 40,
                 onPressed: () {
                   Get.back();
@@ -43,14 +42,14 @@ class RiwayatMedisView extends GetView<RiwayatMedisController> {
           // Other Sliver Widgets
           SliverList(
             delegate: SliverChildListDelegate([
-              WidgetTitleRiwayat2(),
+              const WidgetTitleRiwayat2(),
               Column(
                 children: [
                   Container(
                     height: MediaQuery.of(context).size.height,
                     decoration: BoxDecoration(
-                      color: Color(0xfff6f9fe),
-                      borderRadius: BorderRadius.only(
+                      color: const Color(0xfff6f9fe),
+                      borderRadius: const BorderRadius.only(
                         topRight: Radius.circular(20.0),
                         topLeft: Radius.circular(20.0),
                         bottomRight: Radius.circular(10.0),
@@ -67,10 +66,10 @@ class RiwayatMedisView extends GetView<RiwayatMedisController> {
                     ),
                     child: Column(
                       children: [
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
-                        WidgetTitleRiwayat3(),
+                        const WidgetTitleRiwayat3(),
                         Obx(() {
                           return FutureBuilder(
                               future: API.getListMr(
@@ -105,7 +104,7 @@ class RiwayatMedisView extends GetView<RiwayatMedisController> {
                                     ),
                                   );
                                 } else {
-                                  return Column(
+                                  return const Column(
                                     children: [
                                       SizedBox(
                                         height: 10,

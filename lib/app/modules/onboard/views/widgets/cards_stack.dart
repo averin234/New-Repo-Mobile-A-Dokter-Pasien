@@ -9,7 +9,7 @@ class CardsStack extends StatelessWidget {
   final Animation<Offset> lightCardOffsetAnimation;
   final Animation<Offset> darkCardOffsetAnimation;
 
-  const CardsStack({
+  const CardsStack({super.key, 
     required this.pageNumber,
     required this.lightCardChild,
     required this.darkCardChild,

@@ -8,8 +8,8 @@ class DialogInginLogin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 90, bottom: 310, left: 20, right: 20),
-      padding: EdgeInsets.only(
+      margin: const EdgeInsets.only(top: 90, bottom: 310, left: 20, right: 20),
+      padding: const EdgeInsets.only(
         left: 10,
         right: 10,
       ),
@@ -56,13 +56,13 @@ class DialogInginLogin extends StatelessWidget {
                 GestureDetector(
                   onTap: () => Get.back(),
                   child: Container(
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(7),
                       color: Colors.blue,
                     ),
-                    child: Column(
-                      children: const [
+                    child: const Column(
+                      children: [
                         Text("Cancel",
                             style: TextStyle(
                               color: Colors.white,
@@ -74,19 +74,19 @@ class DialogInginLogin extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 20,
                 ),
                 GestureDetector(
                   onTap: () => Get.toNamed(Routes.LOGIN),
                   child: Container(
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(7),
                       color: Colors.greenAccent,
                     ),
-                    child: Column(
-                      children: const [
+                    child: const Column(
+                      children: [
                         Text("Login / Regist",
                             style: TextStyle(
                               color: Colors.white,

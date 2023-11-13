@@ -272,7 +272,7 @@ class WidgetStraggeredGridView extends StatelessWidget {
                               borderRadius: BorderRadius.circular(7),
                               color: Colors.blue,
                             ),
-                            child: Column(
+                            child: const Column(
                               children: [
                                 Padding(
                                   padding: EdgeInsets.all(16),
@@ -296,7 +296,7 @@ class WidgetStraggeredGridView extends StatelessWidget {
                               borderRadius: BorderRadius.circular(7),
                               color: Colors.greenAccent,
                             ),
-                            child: Column(
+                            child: const Column(
                               children: [
                                 Padding(
                                   padding: EdgeInsets.all(16),

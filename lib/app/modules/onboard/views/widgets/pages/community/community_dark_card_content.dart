@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 import '../../../../../login/views/constants.dart';
 
 class CommunityDarkCardContent extends StatelessWidget {
-  const CommunityDarkCardContent();
+  const CommunityDarkCardContent({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: const [
+      children: [
         Padding(
           padding: EdgeInsets.only(top: kPaddingL),
           child: Icon(

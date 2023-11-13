@@ -6,7 +6,6 @@ import 'package:adokter/app/data/componen/data_regist_model.dart';
 import 'package:adokter/app/data/componen/images.dart';
 import 'package:adokter/app/data/componen/local_storage.dart';
 import 'package:adokter/app/data/componen/publics.dart';
-import 'package:adokter/app/modules/custom_dialog/dialog_logout.dart';
 
 import '../../../data/componen/my_font_size.dart';
 import '../../../routes/app_pages.dart';
@@ -17,7 +16,7 @@ class SettingProfileView extends GetView<SettingProfileController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xfff6f9fe),
+      backgroundColor: const Color(0xfff6f9fe),
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
@@ -26,7 +25,7 @@ class SettingProfileView extends GetView<SettingProfileController> {
             Get.back();
           },
           iconSize: 40,
-          color: Color(0xff00AFC1),
+          color: const Color(0xff00AFC1),
           icon: const Icon(Icons.arrow_circle_left_rounded),
         ),
         title: Text(
@@ -40,8 +39,8 @@ class SettingProfileView extends GetView<SettingProfileController> {
         child: ListView(
           children: [
             Container(
-              margin: EdgeInsets.only(left: 10, right: 10),
-              padding: EdgeInsets.all(10),
+              margin: const EdgeInsets.only(left: 10, right: 10),
+              padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(10),
@@ -50,21 +49,21 @@ class SettingProfileView extends GetView<SettingProfileController> {
                     color: Colors.grey.withOpacity(0.1),
                     spreadRadius: 5,
                     blurRadius: 4,
-                    offset: Offset(0, 0), // changes position of shadow
+                    offset: const Offset(0, 0), // changes position of shadow
                   ),
                 ],
               ),
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    SizedBox(
+                    const SizedBox(
                       width: 80,
                       child: Text(
                         "Profile",
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Row(
@@ -80,7 +79,7 @@ class SettingProfileView extends GetView<SettingProfileController> {
                                     : Avatar.perempuan,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 14,
                         ),
                         Column(
@@ -95,7 +94,7 @@ class SettingProfileView extends GetView<SettingProfileController> {
                                     color: Colors.black,
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 20,
                                 ),
                                 Text(
@@ -123,7 +122,7 @@ class SettingProfileView extends GetView<SettingProfileController> {
                                     color: Colors.black,
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 36,
                                 ),
                                 Text(
@@ -151,7 +150,7 @@ class SettingProfileView extends GetView<SettingProfileController> {
                                     color: Colors.black,
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 24,
                                 ),
                                 Text(
@@ -180,8 +179,8 @@ class SettingProfileView extends GetView<SettingProfileController> {
               height: 10,
             ),
             Container(
-              margin: EdgeInsets.only(left: 10, right: 10),
-              padding: EdgeInsets.all(10),
+              margin: const EdgeInsets.only(left: 10, right: 10),
+              padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(10),
@@ -190,7 +189,7 @@ class SettingProfileView extends GetView<SettingProfileController> {
                     color: Colors.grey.withOpacity(0.1),
                     spreadRadius: 5,
                     blurRadius: 4,
-                    offset: Offset(0, 0), // changes position of shadow
+                    offset: const Offset(0, 0), // changes position of shadow
                   ),
                 ],
               ),
@@ -201,9 +200,9 @@ class SettingProfileView extends GetView<SettingProfileController> {
                     children: [
                       InkWell(
                         onTap: () => Get.toNamed(Routes.EDIT_PROFILE),
-                        child: Text(
+                        child: const Text(
                           'Ubah Profile',
-                          style: const TextStyle(
+                          style: TextStyle(
                             fontWeight: FontWeight.w500,
                             color: Colors.black,
                           ),
@@ -216,36 +215,36 @@ class SettingProfileView extends GetView<SettingProfileController> {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   const Divider(
                     color: Colors.grey,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   InkWell(
                     onTap: () => showModalBottomSheet(
                       context: context,
-                      shape: RoundedRectangleBorder(
+                      shape: const RoundedRectangleBorder(
                         borderRadius: BorderRadius.vertical(
                           top: Radius.circular(20),
                         ),
                       ),
                       builder: (context) => ubahpassowrd(),
                     ),
-                    child: Row(
+                    child: const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
                           'Ubah kata Sandi',
-                          style: const TextStyle(
+                          style: TextStyle(
                             fontWeight: FontWeight.w500,
                             color: Colors.black,
                           ),
                         ),
-                        const Icon(
+                        Icon(
                           Icons.arrow_forward_ios,
                           size: 20,
                           color: Colors.grey,
@@ -253,36 +252,36 @@ class SettingProfileView extends GetView<SettingProfileController> {
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   const Divider(
                     color: Colors.grey,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   InkWell(
                     onTap: () => showModalBottomSheet(
                       context: context,
-                      shape: RoundedRectangleBorder(
+                      shape: const RoundedRectangleBorder(
                         borderRadius: BorderRadius.vertical(
                           top: Radius.circular(20),
                         ),
                       ),
                       builder: (context) => InfoAplikasi(),
                     ),
-                    child: Row(
+                    child: const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
                           'Info Aplikasi',
-                          style: const TextStyle(
+                          style: TextStyle(
                             fontWeight: FontWeight.w500,
                             color: Colors.black,
                           ),
                         ),
-                        const Icon(
+                        Icon(
                           Icons.arrow_forward_ios,
                           size: 20,
                           color: Colors.grey,
@@ -293,13 +292,13 @@ class SettingProfileView extends GetView<SettingProfileController> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             InkWell(
               onTap: () => showModalBottomSheet(
                 context: context,
-                shape: RoundedRectangleBorder(
+                shape: const RoundedRectangleBorder(
                   borderRadius: BorderRadius.vertical(
                     top: Radius.circular(20),
                   ),
@@ -307,8 +306,8 @@ class SettingProfileView extends GetView<SettingProfileController> {
                 builder: (context) => buildSheet(),
               ),
               child: Container(
-                margin: EdgeInsets.only(left: 10, right: 10),
-                padding: EdgeInsets.all(10),
+                margin: const EdgeInsets.only(left: 10, right: 10),
+                padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
                   color: Colors.redAccent,
                   borderRadius: BorderRadius.circular(10),
@@ -317,22 +316,22 @@ class SettingProfileView extends GetView<SettingProfileController> {
                       color: Colors.grey.withOpacity(0.1),
                       spreadRadius: 5,
                       blurRadius: 4,
-                      offset: Offset(0, 0), // changes position of shadow
+                      offset: const Offset(0, 0), // changes position of shadow
                     ),
                   ],
                 ),
-                child: Column(children: [
+                child: const Column(children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
                         'Keluar',
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontWeight: FontWeight.w500,
                           color: Colors.white,
                         ),
                       ),
-                      const Icon(
+                      Icon(
                         Icons.arrow_forward_ios,
                         size: 20,
                         color: Colors.white,
@@ -349,12 +348,12 @@ class SettingProfileView extends GetView<SettingProfileController> {
   }
 
   Widget InfoAplikasi() {
-    return Container(
+    return SizedBox(
       height: 220,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Container(
@@ -364,19 +363,19 @@ class SettingProfileView extends GetView<SettingProfileController> {
               left: Get.width / 2 - 40,
             ),
             decoration: BoxDecoration(
-              color: Color(0xFFe0e0e0),
+              color: const Color(0xFFe0e0e0),
               borderRadius: BorderRadius.circular(10),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
-          Padding(
+          const Padding(
             padding: EdgeInsets.only(left: 20),
             child: Text('Info Aplikasi',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
           ),
-          SizedBox(
+          const SizedBox(
             height: 25,
           ),
           Expanded(
@@ -386,7 +385,7 @@ class SettingProfileView extends GetView<SettingProfileController> {
                   borderRadius: BorderRadius.circular(50),
                   color: Colors.transparent,
                 ),
-                child: Column(
+                child: const Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -422,7 +421,7 @@ class SettingProfileView extends GetView<SettingProfileController> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Container(
@@ -432,19 +431,19 @@ class SettingProfileView extends GetView<SettingProfileController> {
               left: Get.width / 2 - 40,
             ),
             decoration: BoxDecoration(
-              color: Color(0xFFe0e0e0),
+              color: const Color(0xFFe0e0e0),
               borderRadius: BorderRadius.circular(10),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
-          Padding(
+          const Padding(
             padding: EdgeInsets.only(left: 20),
             child: Text('Ubah Kata Sandi',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
           ),
-          SizedBox(
+          const SizedBox(
             height: 25,
           ),
           Expanded(
@@ -472,9 +471,9 @@ class SettingProfileView extends GetView<SettingProfileController> {
                         const SizedBox(
                           height: 10,
                         ),
-                        TextField(
+                        const TextField(
                           textInputAction: TextInputAction.next,
-                          decoration: const InputDecoration(
+                          decoration: InputDecoration(
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.all(
                                   Radius.circular(10.0),
@@ -490,7 +489,7 @@ class SettingProfileView extends GetView<SettingProfileController> {
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Container(
@@ -510,9 +509,9 @@ class SettingProfileView extends GetView<SettingProfileController> {
                         const SizedBox(
                           height: 10,
                         ),
-                        TextField(
+                        const TextField(
                           textInputAction: TextInputAction.next,
-                          decoration: const InputDecoration(
+                          decoration: InputDecoration(
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.all(
                                   Radius.circular(10.0),
@@ -528,7 +527,7 @@ class SettingProfileView extends GetView<SettingProfileController> {
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Container(
@@ -548,9 +547,9 @@ class SettingProfileView extends GetView<SettingProfileController> {
                         const SizedBox(
                           height: 10,
                         ),
-                        TextField(
+                        const TextField(
                           textInputAction: TextInputAction.next,
-                          decoration: const InputDecoration(
+                          decoration: InputDecoration(
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.all(
                                   Radius.circular(10.0),
@@ -573,7 +572,7 @@ class SettingProfileView extends GetView<SettingProfileController> {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Row(
@@ -586,8 +585,8 @@ class SettingProfileView extends GetView<SettingProfileController> {
                     borderRadius: BorderRadius.circular(7),
                     color: Colors.blue,
                   ),
-                  child: Column(
-                    children: const [
+                  child: const Column(
+                    children: [
                       Padding(
                         padding: EdgeInsets.all(16),
                         child: Text(
@@ -604,7 +603,7 @@ class SettingProfileView extends GetView<SettingProfileController> {
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
         ],
@@ -624,7 +623,7 @@ class SettingProfileView extends GetView<SettingProfileController> {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Container(
@@ -634,11 +633,11 @@ class SettingProfileView extends GetView<SettingProfileController> {
                 left: Get.width / 2 - 40,
               ),
               decoration: BoxDecoration(
-                color: Color(0xFFe0e0e0),
+                color: const Color(0xFFe0e0e0),
                 borderRadius: BorderRadius.circular(10),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 25,
             ),
             const Text("Apakah anda ingin Logout ?",
@@ -672,8 +671,8 @@ class SettingProfileView extends GetView<SettingProfileController> {
                         borderRadius: BorderRadius.circular(7),
                         color: Colors.blue,
                       ),
-                      child: Column(
-                        children: const [
+                      child: const Column(
+                        children: [
                           Padding(
                             padding: EdgeInsets.all(16),
                             child: Text(
@@ -714,8 +713,8 @@ class SettingProfileView extends GetView<SettingProfileController> {
                             LocalStorages.getToken;
                         Get.offAllNamed(Routes.LOGIN);
                       },
-                      child: Column(
-                        children: const [
+                      child: const Column(
+                        children: [
                           Padding(
                             padding: EdgeInsets.all(16),
                             child: Text(
@@ -741,7 +740,7 @@ class SettingProfileView extends GetView<SettingProfileController> {
     return TextButton(
       onPressed: routes,
       child: Container(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           color: Colors.white,

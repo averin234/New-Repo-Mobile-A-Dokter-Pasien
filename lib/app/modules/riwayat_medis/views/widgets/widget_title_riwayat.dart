@@ -12,13 +12,13 @@ class _WidgetTitleRiwayatState extends State<WidgetTitleRiwayat> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.fromLTRB(20, 0, 10, 0),
+      padding: const EdgeInsets.fromLTRB(20, 0, 10, 0),
       child: Row(
         children: [
           Expanded(
             child: Text("Riwayat Poliklinik", style: MyStyle.textTitleBlack),
           ),
-          SizedBox(
+          const SizedBox(
             width: 10,
           ),
           // Text(
@@ -29,7 +29,7 @@ class _WidgetTitleRiwayatState extends State<WidgetTitleRiwayat> {
           //     fontSize: MyFontSize.medium1,
           //   ),
           // ),
-          SizedBox(
+          const SizedBox(
             width: 10,
           ),
           // Icon(Icons.arrow_forward_ios_outlined, size: 15,)

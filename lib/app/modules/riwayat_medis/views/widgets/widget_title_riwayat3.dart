@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../../data/componen/my_style.dart';
 
 class WidgetTitleRiwayat3 extends StatefulWidget {
   const WidgetTitleRiwayat3({Key? key}) : super(key: key);
@@ -12,8 +11,8 @@ class WidgetTitleRiwayat3 extends StatefulWidget {
 class _WidgetTitleRiwayat3State extends State<WidgetTitleRiwayat3> {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(20, 0, 10, 0),
+    return const Padding(
+      padding: EdgeInsets.fromLTRB(20, 0, 10, 0),
       child: Row(
         children: [
           Expanded(
@@ -22,7 +21,7 @@ class _WidgetTitleRiwayat3State extends State<WidgetTitleRiwayat3> {
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
           ),
-          const SizedBox(
+          SizedBox(
             width: 10,
           ),
           // Text(
@@ -33,7 +32,7 @@ class _WidgetTitleRiwayat3State extends State<WidgetTitleRiwayat3> {
           //     fontSize: MyFontSize.medium1,
           //   ),
           // ),
-          const SizedBox(
+          SizedBox(
             width: 10,
           ),
           // Icon(Icons.arrow_forward_ios_outlined, size: 15,)

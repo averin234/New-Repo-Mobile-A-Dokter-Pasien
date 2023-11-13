@@ -21,7 +21,7 @@ class _RubahPasswordViewState extends State<RubahPasswordView> {
   final RefreshController _refreshController = RefreshController();
 
   Future<void> _onRefresh() async {
-    await Future.delayed(Duration(seconds: 1));
+    await Future.delayed(const Duration(seconds: 1));
     setState(() {
       entries.add(entries.length);
     });
@@ -33,7 +33,7 @@ class _RubahPasswordViewState extends State<RubahPasswordView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xfff6f9fe),
+      backgroundColor: const Color(0xfff6f9fe),
       appBar: AppBar(
         toolbarHeight: 70,
         elevation: 0,
@@ -42,7 +42,7 @@ class _RubahPasswordViewState extends State<RubahPasswordView> {
             Get.back();
           },
           iconSize: 40,
-          color: Color(0xff00AFC1),
+          color: const Color(0xff00AFC1),
           icon: const Icon(Icons.arrow_circle_left_rounded),
         ),
         actions: [
@@ -57,7 +57,7 @@ class _RubahPasswordViewState extends State<RubahPasswordView> {
                   size: 40,
                 ),
               ),
-              Text('Edit', style: TextStyle(fontWeight: FontWeight.bold)),
+              const Text('Edit', style: TextStyle(fontWeight: FontWeight.bold)),
             ],
           ),
         ],
@@ -71,7 +71,7 @@ class _RubahPasswordViewState extends State<RubahPasswordView> {
             child: Column(
               children: [
                 Container(
-                    padding: EdgeInsets.only(top: 10, bottom: 10),
+                    padding: const EdgeInsets.only(top: 10, bottom: 10),
                     decoration: BoxDecoration(
                       color: Colors.redAccent,
                       boxShadow: [
@@ -79,7 +79,7 @@ class _RubahPasswordViewState extends State<RubahPasswordView> {
                           color: Colors.grey.withOpacity(0.1),
                           spreadRadius: 5,
                           blurRadius: 4,
-                          offset: Offset(0, 0), // changes position of shadow
+                          offset: const Offset(0, 0), // changes position of shadow
                         ),
                       ],
                     ),
@@ -87,7 +87,7 @@ class _RubahPasswordViewState extends State<RubahPasswordView> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Padding(
-                          padding: EdgeInsets.only(left: 10),
+                          padding: const EdgeInsets.only(left: 10),
                           child: Text(
                             'Penting !!',
                             style: GoogleFonts.nunito(
@@ -96,7 +96,7 @@ class _RubahPasswordViewState extends State<RubahPasswordView> {
                                 fontSize: 13),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 5,
                         ),
                         TextScroll(
@@ -113,7 +113,7 @@ class _RubahPasswordViewState extends State<RubahPasswordView> {
                         ),
                       ],
                     )),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 CircleAvatar(
@@ -126,7 +126,7 @@ class _RubahPasswordViewState extends State<RubahPasswordView> {
                             : Avatar.perempuan,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Text(
@@ -143,12 +143,12 @@ class _RubahPasswordViewState extends State<RubahPasswordView> {
                     color: Colors.black,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Container(
-                  margin: EdgeInsets.only(left: 10, right: 10),
-                  padding: EdgeInsets.all(10),
+                  margin: const EdgeInsets.only(left: 10, right: 10),
+                  padding: const EdgeInsets.all(10),
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(10),
@@ -157,7 +157,7 @@ class _RubahPasswordViewState extends State<RubahPasswordView> {
                         color: Colors.grey.withOpacity(0.1),
                         spreadRadius: 5,
                         blurRadius: 4,
-                        offset: Offset(0, 0), // changes position of shadow
+                        offset: const Offset(0, 0), // changes position of shadow
                       ),
                     ],
                   ),
@@ -171,13 +171,13 @@ class _RubahPasswordViewState extends State<RubahPasswordView> {
                             color: Colors.black,
                             fontSize: 17),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       const Divider(
                         color: Colors.grey,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       Row(
@@ -199,13 +199,13 @@ class _RubahPasswordViewState extends State<RubahPasswordView> {
                           color: Colors.black,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       const Divider(
                         color: Colors.grey,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       Row(
@@ -227,13 +227,13 @@ class _RubahPasswordViewState extends State<RubahPasswordView> {
                           color: Colors.black,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       const Divider(
                         color: Colors.grey,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       Row(
@@ -256,13 +256,13 @@ class _RubahPasswordViewState extends State<RubahPasswordView> {
                           color: Colors.black,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       const Divider(
                         color: Colors.grey,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       Row(
@@ -284,13 +284,13 @@ class _RubahPasswordViewState extends State<RubahPasswordView> {
                           color: Colors.black,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       const Divider(
                         color: Colors.grey,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       Row(
@@ -312,13 +312,13 @@ class _RubahPasswordViewState extends State<RubahPasswordView> {
                           color: Colors.black,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       const Divider(
                         color: Colors.grey,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       Row(
@@ -340,13 +340,13 @@ class _RubahPasswordViewState extends State<RubahPasswordView> {
                           color: Colors.black,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       const Divider(
                         color: Colors.grey,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       Row(
@@ -368,13 +368,13 @@ class _RubahPasswordViewState extends State<RubahPasswordView> {
                           color: Colors.black,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       const Divider(
                         color: Colors.grey,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       Row(
@@ -396,13 +396,13 @@ class _RubahPasswordViewState extends State<RubahPasswordView> {
                           color: Colors.black,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       const Divider(
                         color: Colors.grey,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       Row(
@@ -427,7 +427,7 @@ class _RubahPasswordViewState extends State<RubahPasswordView> {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 40,
                 ),
               ],

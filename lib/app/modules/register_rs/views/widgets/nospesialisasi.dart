@@ -29,7 +29,7 @@ class CardNoSpesialisasi extends StatelessWidget {
             child: Image.asset('assets/images/nospesialisasi.png'),
           ),
         ),
-        SizedBox(height: 300)
+        const SizedBox(height: 300)
       ],
     );
   }

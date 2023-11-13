@@ -176,7 +176,7 @@ class CardResep extends StatelessWidget {
                             ),
                           ],
                         ),
-                        Divider(
+                        const Divider(
                           color: Colors.grey,
                         )
                       ],

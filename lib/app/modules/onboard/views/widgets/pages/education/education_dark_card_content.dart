@@ -4,7 +4,7 @@ import '../../../../../login/views/constants.dart';
 
 
 class EducationDarkCardContent extends StatelessWidget {
-  const EducationDarkCardContent();
+  const EducationDarkCardContent({super.key});
 
   @override
   Widget build(BuildContext context) {

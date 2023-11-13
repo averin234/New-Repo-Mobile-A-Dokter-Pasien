@@ -21,8 +21,8 @@ class MyDropDown extends StatelessWidget {
       padding: const EdgeInsets.only(top: 5,bottom: 5),
       decoration: const BoxDecoration(
         color:  Color(0xffecf8ff),
-        borderRadius: const BorderRadius.all(
-          const Radius.circular(10.0),
+        borderRadius: BorderRadius.all(
+          Radius.circular(10.0),
         ),
       ),
       child: DropdownSearch<Dropdowns>(

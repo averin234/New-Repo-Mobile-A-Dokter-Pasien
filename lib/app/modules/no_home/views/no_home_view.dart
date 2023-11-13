@@ -115,7 +115,7 @@ class _NoHomeViewState extends State<NoHomeView> {
                         ],
                       ),
                       padding: const EdgeInsets.all(0),
-                      child: Column(
+                      child: const Column(
                         children: [
                           SizedBox(
                             height: 10,

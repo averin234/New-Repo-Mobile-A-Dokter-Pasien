@@ -10,7 +10,6 @@ import 'package:adokter/app/modules/home/controllers/home_controller.dart';
 import 'package:adokter/app/modules/profile-view/views/profile_view_view.dart';
 import 'package:text_scroll/text_scroll.dart';
 
-import '../../../../routes/app_pages.dart';
 import '../../../register_rs/views/widgets/jadwal_praktik.dart';
 
 class VerticalSliderDemo extends GetView<HomeController> {
@@ -256,7 +255,7 @@ class Item1 extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       Container(
@@ -269,10 +268,10 @@ class Item1 extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
-                            Padding(
+                            const Padding(
                               padding: EdgeInsets.only(left: 10),
                               child: Text(
                                 'Jadwal Praktik',
@@ -285,18 +284,18 @@ class Item1 extends StatelessWidget {
                             items.jadwal == null
                                 ? Padding(
                                     padding:
-                                        EdgeInsets.only(right: 100, left: 100),
+                                        const EdgeInsets.only(right: 100, left: 100),
                                     child: Column(
                                       children: [
                                         Image.asset(
                                           'assets/images/nojadwal.png',
                                           height: 150,
                                         ),
-                                        SizedBox(
+                                        const SizedBox(
                                           height: 10,
                                         ),
-                                        Text("Jadwal Tidak Tersedia"),
-                                        SizedBox(
+                                        const Text("Jadwal Tidak Tersedia"),
+                                        const SizedBox(
                                           height: 10,
                                         ),
                                       ],
