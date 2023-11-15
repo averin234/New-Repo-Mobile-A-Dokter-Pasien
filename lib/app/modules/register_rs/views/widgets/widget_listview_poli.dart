@@ -94,7 +94,7 @@ class CardListViewPoli extends StatelessWidget {
                     child: Hero(
                       tag: tag,
                       child: Image.network(
-                        items.foto ?? Avatar.lakiLaki,
+                        Avatar.lakiLaki,
                         fit: BoxFit.fill,
                       ),
                     ),

@@ -222,7 +222,7 @@ class MyRegister1 extends GetView<EditProfileController> {
           final getData = await API.getDataPasien(
               noKtp: controller.nikPasienController.text);
           print(getData.toJson());
-          Get.offNamed(Routes.RUBAH_PASSWORD);
+          Get.offNamed(Routes.PROFILE_PASIEN);
         }
 
         print(editPasien);

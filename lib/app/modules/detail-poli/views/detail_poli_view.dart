@@ -28,7 +28,8 @@ class DetailPoliView extends GetView<DetailPoliController> {
               expandedHeight: 200,
               flexibleSpace: FlexibleSpaceBar(
                 background: Image.network(
-                  controller.items.foto ?? Avatar.lakiLaki,
+                  // controller.items.foto ?? Avatar.lakiLaki,
+                  Avatar.lakiLaki,
                   fit: BoxFit.contain,
                 ),
               ),
